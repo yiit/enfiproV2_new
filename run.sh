@@ -18,7 +18,6 @@ SERVICE_NAME="touch-beep"
 BEEP_FREQ=500
 BEEP_LEN=120
 
-
 echo "==> pcspkr modülü etkinleştiriliyor …"
 if ! lsmod | grep -q pcspkr; then
   sudo modprobe pcspkr
@@ -102,11 +101,10 @@ sudo apt install -y wget git build-essential libssl-dev zlib1g-dev libbz2-dev li
 sudo apt install -y libstdc++6:amd64
 read -p "👉 Devam etmek için ENTER'a basın..."
 
-
 #########################################
 # 2. GITHUB'DAN ENFIPROV2 KLONLAMA
 #########################################
-echo "📁 ~/enfiproV2 klasörü hazırlanıyor ve GitHub'dan proje indiriliyor..."
+echo "📁 /home/pi/enfiproV2 klasörü hazırlanıyor ve GitHub'dan proje indiriliyor..."
 git clone https://github.com/yiit/enfiproV2.git
 cd enfiproV2
 read -p "Devam etmek için ENTER'a basın..."
@@ -129,25 +127,25 @@ read -p "Devam etmek için ENTER'a basın..."
 # 4. VENV OLUŞTURMA
 #########################################
 echo "🔧 Python venv oluşturuluyor..."
-~/enfiproV2/python3.13/bin/python3.13 -m venv ~/enfiproV2/venv
+/home/pi/enfiproV2/python3.13/bin/python3.13 -m venv /home/pi/enfiproV2/venv
 read -p "👉 Devam etmek için ENTER'a basın..."
 
 #########################################
 # 5. PIP GÜNCELLEME
 #########################################
 echo "⬆️ pip güncelleniyor..."
-~/enfiproV2/venv/bin/pip install --upgrade pip
+/home/pi/enfiproV2/venv/bin/pip install --upgrade pip
 read -p "👉 Devam etmek için ENTER'a basın..."
 
 #########################################
 # 6. NODEENV + NODE.JS + NPM
 #########################################
 echo "🟢 nodeenv kuruluyor ve Node.js kuruluyor..."
-~/enfiproV2/venv/bin/pip install nodeenv
-~/enfiproV2/venv/bin/nodeenv -p
+/home/pi/enfiproV2/venv/bin/pip install nodeenv
+/home/pi/enfiproV2/venv/bin/nodeenv -p
 export PATH="$HOME/enfiproV2/venv/bin:$PATH"
-~/enfiproV2/venv/bin/npm install -g npm@11.3.0
-~/enfiproV2/venv/bin/npm install express serialport @serialport/parser-readline cors
+/home/pi/enfiproV2/venv/bin/npm install -g npm@11.3.0
+/home/pi/enfiproV2/venv/bin/npm install express serialport @serialport/parser-readline cors
 read -p "👉 Devam etmek için ENTER'a basın..."
 
 #########################################
@@ -168,8 +166,8 @@ read -p "Devam etmek için ENTER'a basın..."
 # 8. POSTGRESQL DATA OLUŞTURMA
 #########################################
 echo "📂 PostgreSQL data klasörü hazırlanıyor..."
-mkdir -p ~/enfiproV2/pgsql14_data
-~/enfiproV2/pgsql14/bin/initdb -D ~/enfiproV2/pgsql14_data
+mkdir -p /home/pi/enfiproV2/pgsql14_data
+/home/pi/enfiproV2/pgsql14/bin/initdb -D /home/pi/enfiproV2/pgsql14_data
 sleep 5
 read -p "👉 Devam etmek için ENTER'a basın..."
 
@@ -200,17 +198,17 @@ sudo systemctl enable postgresql-enfipro
 sudo systemctl start postgresql-enfipro
 
 echo "🛠 PostgreSQL kullanıcısı ve veritabanı oluşturuluyor..."
-~/enfiproV2/pgsql14/bin/psql -h localhost -d postgres -c "CREATE ROLE django_user WITH LOGIN PASSWORD '1';"
-~/enfiproV2/pgsql14/bin/psql -h localhost -d postgres -c "CREATE DATABASE django_db OWNER django_user;"
-~/enfiproV2/pgsql14/bin/psql -h localhost -d postgres -c "GRANT ALL PRIVILEGES ON DATABASE django_db TO django_user;"
+/home/pi/enfiproV2/pgsql14/bin/psql -h localhost -d postgres -c "CREATE ROLE django_user WITH LOGIN PASSWORD '1';"
+/home/pi/enfiproV2/pgsql14/bin/psql -h localhost -d postgres -c "CREATE DATABASE django_db OWNER django_user;"
+/home/pi/enfiproV2/pgsql14/bin/psql -h localhost -d postgres -c "GRANT ALL PRIVILEGES ON DATABASE django_db TO django_user;"
 read -p "👉 Devam etmek için ENTER'a basın..."
 
 #########################################
 # 10. DJANGO + GEREKLİ KÜTÜPHANELER
 #########################################
 echo "📦 Django ve requirements.txt kuruluyor..."
-~/enfiproV2/venv/bin/pip install Django psycopg2-binary
-~/enfiproV2/venv/bin/pip install -r ~/enfiproV2/enfiproV2/requirements.txt
+/home/pi/enfiproV2/venv/bin/pip install Django psycopg2-binary
+/home/pi/enfiproV2/venv/bin/pip install -r /home/pi/enfiproV2/enfiproV2/requirements.txt
 read -p "👉 Devam etmek için ENTER'a basın..."
 
 #########################################
@@ -238,10 +236,10 @@ sudo systemctl start django-enfipro
 
 
 echo "🔧 Django migrate ve superuser işlemleri..."
-cd ~/enfiproV2/enfiproV2
-~/enfiproV2/venv/bin/python manage.py makemigrations
-~/enfiproV2/venv/bin/python manage.py migrate
-echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_superuser('pi', 'pi@example.com', '1')" | ~/enfiproV2/venv/bin/python manage.py shell
+cd /home/pi/enfiproV2/enfiproV2
+/home/pi/enfiproV2/venv/bin/python manage.py makemigrations
+/home/pi/enfiproV2/venv/bin/python manage.py migrate
+echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_superuser('pi', 'pi@example.com', '1')" | /home/pi/enfiproV2/venv/bin/python manage.py shell
 read -p "👉 Devam etmek için ENTER'a basın..."
 
 #########################################
@@ -319,6 +317,10 @@ mkdir -p /home/pi/.config/lxsession/LXDE-pi
 sudo tee /home/pi/.config/lxsession/LXDE-pi/autostart > /dev/null <<EOL
 @lxpanel --profile LXDE-pi
 @pcmanfm --desktop --profile LXDE-pi
+@xscreensaver -no-splash
+@xset s off
+@xset -dpms
+@xset s noblank
 @/usr/bin/google-chrome --kiosk --force-device-scale-factor=0.65 http://localhost:8000
 EOL
 
