@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Yazdırma Kayıtları Raporu</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        form {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #999;
+            padding: 8px 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f5f5f5;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .buttons button, .buttons a button {
+            padding: 8px 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .buttons button:hover {
+            background-color: #0056b3;
+        }
+
+        .calendar-input {
+            padding: 8px;
+            font-size: 16px;
+            width: 150px;
+        }
+            td:nth-child(4),
+            th:nth-child(4) {
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>🧾 Yazdırma Kayıtları Raporu</h1>
+
+    <!-- 🔍 Filtreleme Formu -->
+    <form id="filterForm" method="get">
+        <label for="start_date">Başlangıç:</label>
+        <input type="text" name="start_date" id="start_date" value="{{ request.GET.start_date }}" class="calendar-input">
+
+        <label for="end_date">Bitiş:</label>
+        <input type="text" name="end_date" id="end_date" value="{{ request.GET.end_date }}" class="calendar-input">
+
+        <div class="buttons">
+            <button type="submit">🔍 Filtrele</button>
+            <button type="button" id="exportExcel">📥 Excel'e Aktar</button>
+        </div>
+    </form>
+
+    {% if logs %}
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>Tarih</th>
+                <th>Müşteri</th>
+                <th>Kategori</th>
+                <th>Ürün</th>
+                <th>Ağırlık (kg)</th>
+                <th>Operatör</th>
+                <th>Paket Sayısı</th>
+                <th>Toplam Paket Sayısı</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for log in logs %}
+            <tr>
+                <td>{{ log.Tarih }}</td>
+                <td>{{ log.Musteri }}</td>
+                <td>{{ log.Kategori }}</td>
+                <td>{{ log.Urun }}</td>
+                <td style="text-align: left;">{{ log.Agirlik|floatformat:3 }}</td>
+                <td>{{ log.Operator }}</td>
+                <td>{{ log.Paket_Sayisi }}</td>
+                <td>{{ log.Toplam_Paket_Sayisi }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3"><strong>Ağırlık (kg):</strong></td>
+                <td id="footer-weight" colspan="3"></td>
+            </tr>
+            <tr>
+                <td colspan="3"><strong>Paket Sayısı:</strong></td>
+                <td id="footer-paket" colspan="3"></td>
+            </tr>
+            <tr>
+                <td colspan="3"><strong>Kayıt Sayısı:</strong></td>
+                <td id="footer-count" colspan="3"></td>
+            </tr>
+        </tfoot>
+        
+    </table>
+    {% else %}
+        <p>🔍 Kayıt bulunamadı.</p>
+    {% endif %}
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+
+    <script>
+        // Flatpickr'ı başlatma
+        flatpickr("#start_date", {
+            dateFormat: "Y-m-d", // YYYY-MM-DD formatında tarih
+            locale: "tr", // Türkçe dil desteği
+            maxDate: "today" // Bugünden sonrası seçilemez
+        });
+
+        flatpickr("#end_date", {
+            dateFormat: "Y-m-d", // YYYY-MM-DD formatında tarih
+            locale: "tr", // Türkçe dil desteği
+            maxDate: "today" // Bugünden sonrası seçilemez
+        });
+
+        // DataTable başlatma
+        $(document).ready(function() {
+    var table = $('#dataTable').DataTable({
+        "paging": true,
+        "searching": true,
+        "ordering": true,
+        "info": true,
+        "pageLength": 1000,  // başlangıçta 1000 göster
+        "lengthMenu": [[10, 25, 50, 100, 1000, 10000], [10, 25, 50, 100, 1000, "10.000"]],
+        "language": {
+            "url": "https://cdn.datatables.net/plug-ins/1.13.1/i18n/tr.json"
+        },
+        "footerCallback": function (row, data, start, end, display) {
+            var api = this.api();
+
+            // Yardımcı fonksiyon: String formatlı sayıları temizleyip sayıya çevirir
+            var intVal = function(i) {
+                return typeof i === 'string' ?
+                    parseFloat(i.replace(/[^0-9.-]+/g, '')) || 0 :
+                    typeof i === 'number' ?
+                        i : 0;
+            };
+
+            // "Ağırlık (kg)" sütunu: 4. sütun (0-index: 3)
+            var totalWeight = api.column(4).data().reduce(function(a, b) {
+                return intVal(a) + intVal(b);
+            }, 0);
+
+            var pageTotalWeight = api.column(4, { filter: 'applied' }).data().reduce(function(a, b) {
+                return intVal(a) + intVal(b);
+            }, 0);
+
+            // "Paket Sayısı" sütunu: 6. sütun (0-index: 5)
+            var totalPaket = api.column(6).data().reduce(function(a, b) {
+                return intVal(a) + intVal(b);
+            }, 0);
+
+            var pageTotalPaket = api.column(6, { filter: 'applied' }).data().reduce(function(a, b) {
+                return intVal(a) + intVal(b);
+            }, 0);
+
+            // Kayıt sayısını da hesaplayalım:
+            var totalCount = data.length;
+            var pageCount = api.rows({ filter: 'applied' }).data().length;
+
+            // Footer'daki hücreleri güncelleyelim
+            $('#footer-weight').html(
+                'Genel Toplam: ' + totalWeight.toFixed(3) + ' kg<br>' +
+                'Gösterilen: ' + pageTotalWeight.toFixed(3) + ' kg'
+            );
+
+            $('#footer-paket').html(
+                'Genel Toplam: ' + totalPaket + '<br>' +
+                'Gösterilen: ' + pageTotalPaket
+            );
+
+            $('#footer-count').html(
+                'Genel: ' + totalCount + '<br>' +
+                'Gösterilen: ' + pageCount
+            );
+        }
+    });
+});
+
+
+$('#exportExcel').click(function () {
+    var table = $('#dataTable').DataTable();
+    var data = table.rows({ filter: 'applied' }).data().toArray();
+
+    // Başlıkları çekelim
+    var headers = [];
+    $('#dataTable thead th').each(function () {
+        headers.push($(this).text().trim());
+    });
+
+    // Verileri düzgün dizi haline getirelim
+    var rows = data.map(function (row) {
+        return [
+            row[0], // Tarih
+            row[1], // Müşteri
+            row[2], // Ürün
+            parseFloat(row[3]).toFixed(3), // Ağırlık: 3 basamak
+            row[4], // Operatör
+            row[5]  // Paket Sayısı
+        ];
+    });
+
+    // Excel'e uygun veri dizisi (başlık + satırlar)
+    var excelData = [headers, ...rows];
+
+    var wb = XLSX.utils.book_new();
+    var ws = XLSX.utils.aoa_to_sheet(excelData);
+    XLSX.utils.book_append_sheet(wb, ws, "Yazdirma Raporu");
+    XLSX.writeFile(wb, "Yazdirma_Kayitlari_Raporu.xlsx");
+});
+
+
+
+    </script>
+
+</body>
+</html>

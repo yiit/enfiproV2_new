@@ -1,0 +1,11 @@
+[
+{
+    "model": "products.category",
+    "pk": 5,
+    "fields": {
+        "name": "peynir",
+        "description": "peynir",
+        "status": "ACTIVE"
+    }
+}
+]

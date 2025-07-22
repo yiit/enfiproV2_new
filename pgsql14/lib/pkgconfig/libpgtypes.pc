@@ -1,0 +1,9 @@
+Name: libpgtypes
+Description: PostgreSQL libpgtypes library
+Url: https://www.postgresql.org/
+Version: 14.11
+Requires: 
+Requires.private: 
+Cflags: -I/home/pi/enfiproV2/pgsql14/include
+Libs: -L/home/pi/enfiproV2/pgsql14/lib -lpgtypes
+Libs.private:  -lpgcommon -lpgport -lm

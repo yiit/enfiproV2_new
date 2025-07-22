@@ -1,0 +1,1005 @@
+2025-04-29 15:02:18.256 +03 [18029] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-04-29 15:02:18.257 +03 [18029] LOG:  listening on IPv6 address "::1", port 5432
+2025-04-29 15:02:18.257 +03 [18029] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-04-29 15:02:18.280 +03 [18029] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-04-29 15:02:18.306 +03 [18030] LOG:  database system was shut down at 2025-04-29 15:01:44 +03
+2025-04-29 15:02:18.318 +03 [18029] LOG:  database system is ready to accept connections
+2025-04-29 15:13:55.412 +03 [18029] LOG:  received fast shutdown request
+2025-04-29 15:13:55.433 +03 [18029] LOG:  aborting any active transactions
+2025-04-29 15:13:55.435 +03 [18029] LOG:  background worker "logical replication launcher" (PID 18036) exited with exit code 1
+2025-04-29 15:13:55.435 +03 [18031] LOG:  shutting down
+2025-04-29 15:13:55.558 +03 [18029] LOG:  database system is shut down
+2025-04-29 15:14:23.323 +03 [644] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-04-29 15:14:23.714 +03 [644] LOG:  listening on IPv6 address "::1", port 5432
+2025-04-29 15:14:23.714 +03 [644] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-04-29 15:14:23.776 +03 [644] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-04-29 15:14:24.061 +03 [927] LOG:  database system was shut down at 2025-04-29 15:13:55 +03
+2025-04-29 15:14:24.090 +03 [644] LOG:  database system is ready to accept connections
+2025-04-29 15:19:02.109 +03 [644] LOG:  received fast shutdown request
+2025-04-29 15:19:02.129 +03 [644] LOG:  aborting any active transactions
+2025-04-29 15:19:02.130 +03 [644] LOG:  background worker "logical replication launcher" (PID 940) exited with exit code 1
+2025-04-29 15:19:02.131 +03 [934] LOG:  shutting down
+2025-04-29 15:19:02.275 +03 [644] LOG:  database system is shut down
+2025-04-29 15:19:35.467 +03 [675] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-04-29 15:19:35.831 +03 [675] LOG:  listening on IPv6 address "::1", port 5432
+2025-04-29 15:19:35.831 +03 [675] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-04-29 15:19:35.855 +03 [675] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-04-29 15:19:35.890 +03 [944] LOG:  database system was shut down at 2025-04-29 15:19:02 +03
+2025-04-29 15:19:35.920 +03 [675] LOG:  database system is ready to accept connections
+2025-04-29 15:24:40.413 +03 [675] LOG:  received fast shutdown request
+2025-04-29 15:24:40.431 +03 [675] LOG:  aborting any active transactions
+2025-04-29 15:24:40.432 +03 [675] LOG:  background worker "logical replication launcher" (PID 955) exited with exit code 1
+2025-04-29 15:24:40.432 +03 [950] LOG:  shutting down
+2025-04-29 15:24:40.598 +03 [675] LOG:  database system is shut down
+2025-04-29 15:25:10.546 +03 [658] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-04-29 15:25:10.848 +03 [658] LOG:  listening on IPv6 address "::1", port 5432
+2025-04-29 15:25:10.848 +03 [658] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-04-29 15:25:10.884 +03 [658] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-04-29 15:25:11.171 +03 [942] LOG:  database system was shut down at 2025-04-29 15:24:40 +03
+2025-04-29 15:25:11.269 +03 [658] LOG:  database system is ready to accept connections
+2025-04-29 15:26:14.531 +03 [658] LOG:  received fast shutdown request
+2025-04-29 15:26:14.599 +03 [658] LOG:  aborting any active transactions
+2025-04-29 15:26:14.602 +03 [658] LOG:  background worker "logical replication launcher" (PID 965) exited with exit code 1
+2025-04-29 15:26:14.603 +03 [960] LOG:  shutting down
+2025-04-29 15:26:14.792 +03 [658] LOG:  database system is shut down
+2025-04-29 15:26:44.577 +03 [694] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-04-29 15:26:44.582 +03 [694] LOG:  listening on IPv6 address "::1", port 5432
+2025-04-29 15:26:44.582 +03 [694] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-04-29 15:26:44.640 +03 [694] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-04-29 15:26:44.710 +03 [941] LOG:  database system was shut down at 2025-04-29 15:26:14 +03
+2025-04-29 15:26:44.785 +03 [694] LOG:  database system is ready to accept connections
+2025-04-29 15:28:26.725 +03 [694] LOG:  received fast shutdown request
+2025-04-29 15:28:27.842 +03 [694] LOG:  aborting any active transactions
+2025-04-29 15:28:27.845 +03 [694] LOG:  background worker "logical replication launcher" (PID 957) exited with exit code 1
+2025-04-29 15:28:27.845 +03 [952] LOG:  shutting down
+2025-04-29 15:28:30.926 +03 [694] LOG:  database system is shut down
+2025-04-29 15:28:55.956 +03 [683] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-04-29 15:28:56.192 +03 [683] LOG:  listening on IPv6 address "::1", port 5432
+2025-04-29 15:28:56.192 +03 [683] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-04-29 15:28:56.227 +03 [683] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-04-29 15:28:56.272 +03 [936] LOG:  database system was shut down at 2025-04-29 15:28:30 +03
+2025-04-29 15:28:56.370 +03 [683] LOG:  database system is ready to accept connections
+2025-04-29 15:30:52.441 +03 [683] LOG:  received fast shutdown request
+2025-04-29 15:30:52.456 +03 [683] LOG:  aborting any active transactions
+2025-04-29 15:30:52.458 +03 [683] LOG:  background worker "logical replication launcher" (PID 960) exited with exit code 1
+2025-04-29 15:30:52.458 +03 [954] LOG:  shutting down
+2025-04-29 15:30:52.629 +03 [683] LOG:  database system is shut down
+2025-04-29 15:31:20.927 +03 [699] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-04-29 15:31:21.393 +03 [699] LOG:  listening on IPv6 address "::1", port 5432
+2025-04-29 15:31:21.394 +03 [699] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-04-29 15:31:21.506 +03 [699] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-04-29 15:31:21.559 +03 [958] LOG:  database system was shut down at 2025-04-29 15:30:52 +03
+2025-04-29 15:31:21.599 +03 [699] LOG:  database system is ready to accept connections
+2025-04-29 15:31:50.771 +03 [699] LOG:  received fast shutdown request
+2025-04-29 15:31:50.854 +03 [699] LOG:  aborting any active transactions
+2025-04-29 15:31:50.857 +03 [699] LOG:  background worker "logical replication launcher" (PID 967) exited with exit code 1
+2025-04-29 15:31:50.857 +03 [962] LOG:  shutting down
+2025-04-29 15:31:51.310 +03 [699] LOG:  database system is shut down
+2025-04-30 08:52:48.702 +03 [660] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-04-30 08:52:48.864 +03 [660] LOG:  listening on IPv6 address "::1", port 5432
+2025-04-30 08:52:48.864 +03 [660] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-04-30 08:52:48.902 +03 [660] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-04-30 08:52:49.234 +03 [806] LOG:  database system was shut down at 2025-04-29 15:31:51 +03
+2025-04-30 08:52:49.304 +03 [660] LOG:  database system is ready to accept connections
+2025-04-30 09:29:07.584 +03 [660] LOG:  received fast shutdown request
+2025-04-30 09:29:07.595 +03 [660] LOG:  aborting any active transactions
+2025-04-30 09:29:07.598 +03 [660] LOG:  background worker "logical replication launcher" (PID 858) exited with exit code 1
+2025-04-30 09:29:07.598 +03 [853] LOG:  shutting down
+2025-04-30 09:29:07.710 +03 [660] LOG:  database system is shut down
+2025-04-30 12:49:45.259 +03 [695] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-04-30 12:49:45.379 +03 [695] LOG:  listening on IPv6 address "::1", port 5432
+2025-04-30 12:49:45.380 +03 [695] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-04-30 12:49:45.413 +03 [695] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-04-30 12:49:45.456 +03 [849] LOG:  database system was shut down at 2025-04-30 09:29:07 +03
+2025-04-30 12:49:45.493 +03 [695] LOG:  database system is ready to accept connections
+2025-04-30 13:15:11.241 +03 [695] LOG:  received fast shutdown request
+2025-04-30 13:15:11.256 +03 [695] LOG:  aborting any active transactions
+2025-04-30 13:15:11.259 +03 [695] LOG:  background worker "logical replication launcher" (PID 888) exited with exit code 1
+2025-04-30 13:15:11.259 +03 [883] LOG:  shutting down
+2025-04-30 13:15:11.383 +03 [695] LOG:  database system is shut down
+2025-05-05 15:43:56.013 +03 [677] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-05-05 15:43:56.349 +03 [677] LOG:  listening on IPv6 address "::1", port 5432
+2025-05-05 15:43:56.350 +03 [677] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-05-05 15:43:56.407 +03 [677] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-05-05 15:43:56.727 +03 [912] LOG:  database system was shut down at 2025-04-30 13:15:11 +03
+2025-05-05 15:43:56.782 +03 [677] LOG:  database system is ready to accept connections
+2025-05-05 16:58:05.106 +03 [677] LOG:  received fast shutdown request
+2025-05-05 16:58:05.122 +03 [677] LOG:  aborting any active transactions
+2025-05-05 16:58:05.126 +03 [677] LOG:  background worker "logical replication launcher" (PID 957) exited with exit code 1
+2025-05-05 16:58:05.126 +03 [952] LOG:  shutting down
+2025-05-05 16:58:05.263 +03 [677] LOG:  database system is shut down
+2025-05-06 17:08:24.036 +03 [701] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-05-06 17:08:24.249 +03 [701] LOG:  listening on IPv6 address "::1", port 5432
+2025-05-06 17:08:24.249 +03 [701] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-05-06 17:08:24.275 +03 [701] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-05-06 17:08:24.340 +03 [875] LOG:  database system was shut down at 2025-05-05 16:58:05 +03
+2025-05-06 17:08:24.385 +03 [701] LOG:  database system is ready to accept connections
+2025-05-06 20:01:29.937 +03 [701] LOG:  received fast shutdown request
+2025-05-06 20:01:29.948 +03 [701] LOG:  aborting any active transactions
+2025-05-06 20:01:29.951 +03 [701] LOG:  background worker "logical replication launcher" (PID 919) exited with exit code 1
+2025-05-06 20:01:29.951 +03 [914] LOG:  shutting down
+2025-05-06 20:01:30.042 +03 [701] LOG:  database system is shut down
+2025-05-06 21:30:17.562 +03 [656] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-05-06 21:30:17.859 +03 [656] LOG:  listening on IPv6 address "::1", port 5432
+2025-05-06 21:30:17.859 +03 [656] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-05-06 21:30:17.887 +03 [656] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-05-06 21:30:18.199 +03 [926] LOG:  database system was shut down at 2025-05-06 20:01:30 +03
+2025-05-06 21:30:18.248 +03 [656] LOG:  database system is ready to accept connections
+2025-05-06 23:21:13.397 +03 [656] LOG:  received fast shutdown request
+2025-05-06 23:21:13.410 +03 [656] LOG:  aborting any active transactions
+2025-05-06 23:21:13.412 +03 [656] LOG:  background worker "logical replication launcher" (PID 945) exited with exit code 1
+2025-05-06 23:21:13.412 +03 [940] LOG:  shutting down
+2025-05-06 23:21:13.513 +03 [656] LOG:  database system is shut down
+2025-05-07 10:22:16.902 +03 [681] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-05-07 10:22:17.113 +03 [681] LOG:  listening on IPv6 address "::1", port 5432
+2025-05-07 10:22:17.113 +03 [681] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-05-07 10:22:17.151 +03 [681] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-05-07 10:22:17.482 +03 [929] LOG:  database system was shut down at 2025-05-06 23:21:13 +03
+2025-05-07 10:22:17.512 +03 [681] LOG:  database system is ready to accept connections
+2025-05-07 12:35:15.855 +03 [681] LOG:  received fast shutdown request
+2025-05-07 12:35:15.866 +03 [681] LOG:  aborting any active transactions
+2025-05-07 12:35:15.867 +03 [681] LOG:  background worker "logical replication launcher" (PID 946) exited with exit code 1
+2025-05-07 12:35:15.868 +03 [941] LOG:  shutting down
+2025-05-07 12:35:15.950 +03 [681] LOG:  database system is shut down
+2025-05-07 14:25:16.926 +03 [662] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-05-07 14:25:17.261 +03 [662] LOG:  listening on IPv6 address "::1", port 5432
+2025-05-07 14:25:17.261 +03 [662] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-05-07 14:25:17.310 +03 [662] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-05-07 14:25:17.418 +03 [951] LOG:  database system was shut down at 2025-05-07 12:35:15 +03
+2025-05-07 14:25:17.465 +03 [662] LOG:  database system is ready to accept connections
+2025-05-07 17:18:07.959 +03 [662] LOG:  received fast shutdown request
+2025-05-07 17:18:07.974 +03 [662] LOG:  aborting any active transactions
+2025-05-07 17:18:07.976 +03 [662] LOG:  background worker "logical replication launcher" (PID 972) exited with exit code 1
+2025-05-07 17:18:07.977 +03 [967] LOG:  shutting down
+2025-05-07 17:18:08.098 +03 [662] LOG:  database system is shut down
+2025-05-08 09:40:06.733 +03 [680] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-05-08 09:40:07.214 +03 [680] LOG:  listening on IPv6 address "::1", port 5432
+2025-05-08 09:40:07.214 +03 [680] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-05-08 09:40:07.243 +03 [680] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-05-08 09:40:07.295 +03 [932] LOG:  database system was shut down at 2025-05-07 17:18:08 +03
+2025-05-08 09:40:07.338 +03 [680] LOG:  database system is ready to accept connections
+2025-05-08 11:33:00.392 +03 [680] LOG:  received fast shutdown request
+2025-05-08 11:33:00.413 +03 [680] LOG:  aborting any active transactions
+2025-05-08 11:33:00.416 +03 [680] LOG:  background worker "logical replication launcher" (PID 959) exited with exit code 1
+2025-05-08 11:33:00.416 +03 [953] LOG:  shutting down
+2025-05-08 11:33:00.526 +03 [680] LOG:  database system is shut down
+2025-05-08 11:33:32.653 +03 [641] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-05-08 11:33:32.985 +03 [641] LOG:  listening on IPv6 address "::1", port 5432
+2025-05-08 11:33:32.985 +03 [641] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-05-08 11:33:33.047 +03 [641] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-05-08 11:33:33.418 +03 [936] LOG:  database system was shut down at 2025-05-08 11:33:00 +03
+2025-05-08 11:33:33.449 +03 [641] LOG:  database system is ready to accept connections
+2025-05-08 12:04:32.998 +03 [641] LOG:  received fast shutdown request
+2025-05-08 12:04:33.019 +03 [641] LOG:  aborting any active transactions
+2025-05-08 12:04:33.021 +03 [641] LOG:  background worker "logical replication launcher" (PID 953) exited with exit code 1
+2025-05-08 12:04:33.021 +03 [948] LOG:  shutting down
+2025-05-08 12:04:33.137 +03 [641] LOG:  database system is shut down
+2025-05-08 12:05:05.603 +03 [656] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:05:05.603 +03 [656] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:05:10.804 +03 [1294] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:05:10.804 +03 [1294] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:05:16.201 +03 [1708] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:05:16.201 +03 [1708] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:05:21.558 +03 [1773] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:05:21.558 +03 [1773] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:05:26.968 +03 [1811] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:05:26.968 +03 [1811] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:05:32.332 +03 [1828] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:05:32.332 +03 [1828] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:05:38.182 +03 [1833] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:05:38.182 +03 [1833] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:05:43.317 +03 [1853] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:05:43.317 +03 [1853] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:05:48.567 +03 [1873] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:05:48.567 +03 [1873] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:05:53.847 +03 [1885] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:05:53.847 +03 [1885] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:05:59.104 +03 [1889] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:05:59.104 +03 [1889] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:06:04.364 +03 [1893] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:06:04.364 +03 [1893] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:06:09.615 +03 [1897] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:06:09.615 +03 [1897] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:06:14.834 +03 [1901] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:06:14.834 +03 [1901] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:06:20.066 +03 [1933] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:06:20.066 +03 [1933] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:06:25.353 +03 [1937] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:06:25.353 +03 [1937] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:06:30.575 +03 [2513] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:06:30.575 +03 [2513] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:06:35.820 +03 [2530] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:06:35.820 +03 [2530] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:06:41.070 +03 [2538] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:06:41.070 +03 [2538] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:06:45.598 +03 [2544] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:06:45.598 +03 [2544] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:06:50.872 +03 [2548] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:06:50.872 +03 [2548] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:06:56.117 +03 [2554] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:06:56.117 +03 [2554] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:07:01.365 +03 [2560] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:07:01.365 +03 [2560] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:07:06.602 +03 [2564] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:07:06.602 +03 [2564] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:07:11.832 +03 [2568] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:07:11.832 +03 [2568] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:07:17.124 +03 [2572] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:07:17.124 +03 [2572] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:07:22.338 +03 [2585] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:07:22.338 +03 [2585] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:07:27.614 +03 [2589] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:07:27.614 +03 [2589] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:07:32.856 +03 [2593] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:07:32.856 +03 [2593] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:07:38.104 +03 [2597] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:07:38.104 +03 [2597] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:07:43.371 +03 [2601] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:07:43.371 +03 [2601] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:07:48.617 +03 [2605] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:07:48.617 +03 [2605] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:07:53.864 +03 [2609] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:07:53.864 +03 [2609] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:07:59.113 +03 [2613] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:07:59.113 +03 [2613] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:08:04.335 +03 [2617] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:08:04.335 +03 [2617] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:08:09.603 +03 [2621] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:08:09.603 +03 [2621] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:08:14.834 +03 [2626] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:08:14.834 +03 [2626] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:08:20.100 +03 [2630] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:08:20.100 +03 [2630] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:08:25.367 +03 [2634] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:08:25.367 +03 [2634] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:08:30.619 +03 [2638] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:08:30.619 +03 [2638] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:08:35.862 +03 [2642] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:08:35.862 +03 [2642] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:08:41.108 +03 [2646] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:08:41.108 +03 [2646] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:08:46.357 +03 [2650] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:08:46.357 +03 [2650] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:08:51.618 +03 [2655] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:08:51.618 +03 [2655] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:08:56.868 +03 [2661] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:08:56.868 +03 [2661] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:09:02.118 +03 [2668] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:09:02.118 +03 [2668] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:09:07.350 +03 [2672] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:09:07.350 +03 [2672] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:09:12.582 +03 [2676] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:09:12.582 +03 [2676] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:09:17.870 +03 [2682] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:09:17.870 +03 [2682] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:09:23.119 +03 [2687] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:09:23.119 +03 [2687] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:09:28.361 +03 [2691] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:09:28.361 +03 [2691] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:09:33.598 +03 [2695] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:09:33.598 +03 [2695] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:09:38.863 +03 [2699] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:09:38.863 +03 [2699] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:09:44.121 +03 [2705] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:09:44.121 +03 [2705] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:09:49.368 +03 [2710] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:09:49.368 +03 [2710] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:09:55.384 +03 [2715] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:09:55.384 +03 [2715] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:10:00.628 +03 [2720] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:10:00.628 +03 [2720] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:10:05.856 +03 [2727] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:10:05.856 +03 [2727] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:10:11.122 +03 [2733] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:10:11.122 +03 [2733] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:10:16.378 +03 [2740] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:10:16.378 +03 [2740] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:10:21.596 +03 [2746] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:10:21.596 +03 [2746] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:10:26.878 +03 [2750] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:10:26.878 +03 [2750] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:10:32.129 +03 [2754] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:10:32.129 +03 [2754] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:10:37.396 +03 [2759] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:10:37.396 +03 [2759] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:10:42.642 +03 [2763] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:10:42.642 +03 [2763] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:10:47.879 +03 [2767] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:10:47.879 +03 [2767] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:10:53.129 +03 [2771] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:10:53.129 +03 [2771] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:10:58.397 +03 [2775] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:10:58.397 +03 [2775] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:11:03.643 +03 [2779] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:11:03.643 +03 [2779] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:11:08.886 +03 [2784] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:11:08.886 +03 [2784] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:11:14.104 +03 [2788] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:11:14.104 +03 [2788] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:11:19.352 +03 [2792] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:11:19.352 +03 [2792] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:11:24.644 +03 [2797] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:11:24.644 +03 [2797] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:11:29.896 +03 [2801] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:11:29.896 +03 [2801] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:11:35.140 +03 [2805] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:11:35.140 +03 [2805] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:11:40.374 +03 [2809] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:11:40.374 +03 [2809] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:11:45.639 +03 [2813] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:11:45.639 +03 [2813] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:11:50.894 +03 [2817] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:11:50.894 +03 [2817] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:11:56.142 +03 [2821] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:11:56.142 +03 [2821] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:12:01.381 +03 [2825] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:12:01.381 +03 [2825] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:12:06.615 +03 [2834] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:12:06.615 +03 [2834] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:12:11.846 +03 [2857] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:12:11.846 +03 [2857] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:12:17.145 +03 [2861] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:12:17.145 +03 [2861] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:12:22.389 +03 [2865] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:12:22.389 +03 [2865] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:12:27.629 +03 [2869] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:12:27.629 +03 [2869] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:12:32.878 +03 [2873] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:12:32.878 +03 [2873] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:12:38.108 +03 [2877] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:12:38.108 +03 [2877] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:12:43.395 +03 [2882] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:12:43.395 +03 [2882] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:12:48.635 +03 [2888] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:12:48.635 +03 [2888] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:12:53.877 +03 [2892] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:12:53.877 +03 [2892] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:12:59.129 +03 [2896] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:12:59.129 +03 [2896] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:13:04.394 +03 [2900] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:13:04.394 +03 [2900] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:13:09.643 +03 [2904] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:13:09.643 +03 [2904] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:13:14.853 +03 [2908] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:13:14.853 +03 [2908] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:13:20.128 +03 [2914] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:13:20.128 +03 [2914] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:13:25.389 +03 [2918] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:13:25.389 +03 [2918] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:13:30.644 +03 [2922] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:13:30.644 +03 [2922] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:13:35.849 +03 [2932] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:13:35.849 +03 [2932] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:13:41.132 +03 [2938] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:13:41.132 +03 [2938] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:13:46.379 +03 [2942] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:13:46.379 +03 [2942] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:13:51.636 +03 [2946] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:13:51.636 +03 [2946] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:13:56.904 +03 [2950] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:13:56.904 +03 [2950] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:14:02.122 +03 [2954] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:14:02.122 +03 [2954] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:14:07.379 +03 [2958] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:14:07.379 +03 [2958] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:14:12.609 +03 [2962] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:14:12.609 +03 [2962] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:14:17.859 +03 [2967] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:14:17.859 +03 [2967] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:14:23.117 +03 [2971] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:14:23.117 +03 [2971] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:14:28.352 +03 [2975] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:14:28.352 +03 [2975] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:14:33.610 +03 [2979] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:14:33.610 +03 [2979] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:14:38.743 +03 [2985] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:14:38.743 +03 [2985] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:14:44.616 +03 [3005] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:14:44.616 +03 [3005] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:14:49.847 +03 [3026] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:14:49.847 +03 [3026] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:14:55.096 +03 [3036] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:14:55.096 +03 [3036] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:15:00.346 +03 [3042] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:15:00.346 +03 [3042] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:15:05.598 +03 [3052] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:15:05.598 +03 [3052] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:15:10.849 +03 [3065] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:15:10.849 +03 [3065] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:15:53.695 +03 [652] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:15:53.695 +03 [652] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:15:59.156 +03 [1284] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:15:59.156 +03 [1284] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:16:04.530 +03 [1652] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:16:04.530 +03 [1652] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:16:09.660 +03 [1679] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:16:09.660 +03 [1679] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:16:14.911 +03 [1695] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:16:14.911 +03 [1695] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:16:20.177 +03 [1699] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:16:20.177 +03 [1699] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:16:25.439 +03 [1703] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:16:25.439 +03 [1703] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:16:30.704 +03 [1709] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:16:30.704 +03 [1709] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:16:35.954 +03 [1713] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:16:35.954 +03 [1713] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:16:41.185 +03 [1729] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:16:41.185 +03 [1729] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:16:46.413 +03 [1757] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:16:46.413 +03 [1757] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:16:51.673 +03 [1825] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:16:51.673 +03 [1825] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:16:56.906 +03 [1838] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:16:56.906 +03 [1838] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:17:00.612 +03 [1847] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:17:00.612 +03 [1847] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:17:05.890 +03 [1871] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:17:05.890 +03 [1871] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:17:11.113 +03 [1876] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:17:11.113 +03 [1876] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:17:16.362 +03 [2362] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:17:16.362 +03 [2362] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:17:21.622 +03 [2476] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:17:21.622 +03 [2476] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:17:26.881 +03 [2497] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:17:26.881 +03 [2497] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:17:32.747 +03 [2501] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:17:32.747 +03 [2501] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:17:38.029 +03 [2505] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:17:38.029 +03 [2505] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:17:43.296 +03 [2509] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:17:43.296 +03 [2509] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:17:48.541 +03 [2513] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:17:48.541 +03 [2513] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:17:53.792 +03 [2517] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:17:53.792 +03 [2517] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:17:58.996 +03 [2530] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:17:58.996 +03 [2530] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:18:03.751 +03 [2534] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:18:03.751 +03 [2534] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:18:09.015 +03 [2540] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:18:09.015 +03 [2540] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:18:14.226 +03 [2546] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:18:14.226 +03 [2546] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:18:19.483 +03 [2555] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:18:19.483 +03 [2555] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:18:24.726 +03 [2570] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:18:24.726 +03 [2570] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:18:30.004 +03 [2577] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:18:30.004 +03 [2577] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:18:35.212 +03 [2639] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:18:35.212 +03 [2639] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:18:41.479 +03 [2643] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:18:41.479 +03 [2643] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:18:46.720 +03 [2647] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:18:46.720 +03 [2647] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:18:51.933 +03 [2651] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:18:51.933 +03 [2651] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:18:57.187 +03 [2659] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:18:57.187 +03 [2659] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:19:02.465 +03 [2664] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:19:02.465 +03 [2664] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:19:07.728 +03 [2668] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:19:07.728 +03 [2668] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:19:12.974 +03 [2672] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:19:12.974 +03 [2672] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:19:18.213 +03 [2677] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:19:18.213 +03 [2677] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:19:23.481 +03 [2681] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:19:23.481 +03 [2681] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:19:28.729 +03 [2685] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:19:28.729 +03 [2685] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:19:33.974 +03 [2689] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:19:33.974 +03 [2689] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:19:39.183 +03 [2701] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:19:39.183 +03 [2701] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:19:44.469 +03 [2705] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:19:44.469 +03 [2705] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:19:49.734 +03 [2709] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:19:49.734 +03 [2709] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:19:54.981 +03 [2713] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:19:54.981 +03 [2713] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:20:00.240 +03 [2718] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:20:00.240 +03 [2718] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:20:05.465 +03 [2722] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:20:05.465 +03 [2722] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:20:10.724 +03 [2726] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:20:10.724 +03 [2726] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:20:15.979 +03 [2730] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:20:15.979 +03 [2730] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:20:21.226 +03 [2734] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:20:21.226 +03 [2734] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:20:26.466 +03 [2738] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:20:26.466 +03 [2738] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:20:31.711 +03 [2742] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:20:31.711 +03 [2742] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:20:36.970 +03 [2746] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:20:36.970 +03 [2746] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:20:42.229 +03 [2750] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:20:42.229 +03 [2750] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:20:47.472 +03 [2754] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:20:47.472 +03 [2754] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:20:52.716 +03 [2760] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:20:52.716 +03 [2760] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:20:57.975 +03 [2764] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:20:57.975 +03 [2764] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:21:03.223 +03 [2769] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:21:03.223 +03 [2769] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:21:08.479 +03 [2773] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:21:08.479 +03 [2773] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:21:13.714 +03 [2777] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:21:13.714 +03 [2777] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:21:18.965 +03 [2781] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:21:18.965 +03 [2781] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:21:24.228 +03 [2786] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:21:24.228 +03 [2786] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:21:29.433 +03 [2791] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:21:29.433 +03 [2791] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:21:34.727 +03 [2796] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:21:34.727 +03 [2796] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:21:39.965 +03 [2800] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:21:39.965 +03 [2800] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:21:45.190 +03 [2804] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:21:45.190 +03 [2804] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:21:50.477 +03 [2808] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:21:50.477 +03 [2808] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:21:55.729 +03 [2812] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:21:55.729 +03 [2812] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:22:00.972 +03 [2818] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:22:00.972 +03 [2818] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:22:06.183 +03 [2823] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:22:06.183 +03 [2823] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:22:11.465 +03 [2827] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:22:11.465 +03 [2827] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:22:16.717 +03 [2832] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:22:16.717 +03 [2832] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:22:21.932 +03 [2859] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:22:21.932 +03 [2859] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:22:27.181 +03 [2934] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:22:27.181 +03 [2934] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:22:32.431 +03 [2950] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:22:32.431 +03 [2950] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:22:37.700 +03 [2972] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:22:37.700 +03 [2972] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:22:42.941 +03 [2976] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:22:42.941 +03 [2976] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:22:48.191 +03 [2980] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:22:48.191 +03 [2980] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:22:53.461 +03 [2984] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:22:53.461 +03 [2984] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:22:58.702 +03 [2988] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:22:58.702 +03 [2988] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:23:03.939 +03 [2994] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:23:03.939 +03 [2994] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:23:09.193 +03 [3008] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:23:09.193 +03 [3008] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:23:14.450 +03 [3012] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:23:14.450 +03 [3012] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:23:19.709 +03 [3016] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:23:19.709 +03 [3016] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:23:24.944 +03 [3021] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:23:24.944 +03 [3021] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:23:30.234 +03 [3027] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:23:30.234 +03 [3027] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:23:35.481 +03 [3031] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:23:35.481 +03 [3031] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:23:40.721 +03 [3035] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:23:40.721 +03 [3035] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:23:45.963 +03 [3039] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:23:45.963 +03 [3039] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:23:51.219 +03 [3043] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:23:51.219 +03 [3043] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:23:56.480 +03 [3047] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:23:56.480 +03 [3047] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:24:01.725 +03 [3052] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:24:01.725 +03 [3052] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:24:06.951 +03 [3065] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:24:06.951 +03 [3065] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:24:12.212 +03 [3069] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:24:12.212 +03 [3069] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:24:17.471 +03 [3073] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:24:17.471 +03 [3073] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:24:22.729 +03 [3078] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:24:22.729 +03 [3078] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:24:27.974 +03 [3082] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:24:27.974 +03 [3082] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:24:33.223 +03 [3086] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:24:33.223 +03 [3086] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:24:38.472 +03 [3090] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:24:38.472 +03 [3090] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:24:43.717 +03 [3094] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:24:43.717 +03 [3094] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:24:48.980 +03 [3098] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:24:48.980 +03 [3098] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:24:54.222 +03 [3102] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:24:54.222 +03 [3102] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:24:59.463 +03 [3106] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:24:59.463 +03 [3106] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:25:04.728 +03 [3114] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:25:04.728 +03 [3114] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:25:09.978 +03 [3118] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:25:09.978 +03 [3118] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:25:15.230 +03 [3122] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:25:15.230 +03 [3122] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:25:20.470 +03 [3126] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:25:20.470 +03 [3126] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:25:25.716 +03 [3131] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:25:25.716 +03 [3131] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:25:30.975 +03 [3136] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:25:30.975 +03 [3136] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:25:36.225 +03 [3140] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:25:36.225 +03 [3140] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:25:41.479 +03 [3144] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:25:41.479 +03 [3144] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:25:46.719 +03 [3148] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:25:46.719 +03 [3148] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:25:51.962 +03 [3154] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:25:51.962 +03 [3154] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:34:46.099 +03 [692] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-05-08 12:34:46.524 +03 [692] LOG:  listening on IPv6 address "::1", port 5432
+2025-05-08 12:34:46.524 +03 [692] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-05-08 12:34:46.564 +03 [692] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-05-08 12:34:46.608 +03 [910] LOG:  database system was shut down at 2025-05-08 12:34:16 +03
+2025-05-08 12:34:46.637 +03 [692] LOG:  database system is ready to accept connections
+2025-05-08 17:17:33.748 +03 [692] LOG:  received fast shutdown request
+2025-05-08 17:17:33.767 +03 [692] LOG:  aborting any active transactions
+2025-05-08 17:17:33.769 +03 [692] LOG:  background worker "logical replication launcher" (PID 935) exited with exit code 1
+2025-05-08 17:17:33.769 +03 [930] LOG:  shutting down
+2025-05-08 17:17:33.891 +03 [692] LOG:  database system is shut down
+2025-05-09 09:34:38.048 +03 [665] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-05-09 09:34:38.254 +03 [665] LOG:  listening on IPv6 address "::1", port 5432
+2025-05-09 09:34:38.254 +03 [665] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-05-09 09:34:38.291 +03 [665] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-05-09 09:34:38.348 +03 [909] LOG:  database system was shut down at 2025-05-08 17:17:33 +03
+2025-05-09 09:34:38.412 +03 [665] LOG:  database system is ready to accept connections
+2025-05-09 09:35:07.965 +03 [949] LOG:  stats_timestamp 2025-05-09 09:35:08.525646+03 is later than collector's time 2025-05-09 09:35:07.965553+03 for database 16385
+2025-05-09 15:30:18.339 +03 [665] LOG:  received fast shutdown request
+2025-05-09 15:30:18.359 +03 [665] LOG:  aborting any active transactions
+2025-05-09 15:30:18.363 +03 [665] LOG:  background worker "logical replication launcher" (PID 950) exited with exit code 1
+2025-05-09 15:30:18.363 +03 [945] LOG:  shutting down
+2025-05-09 15:30:18.470 +03 [665] LOG:  database system is shut down
+2025-05-11 00:10:55.974 +03 [671] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-05-11 00:10:56.128 +03 [671] LOG:  listening on IPv6 address "::1", port 5432
+2025-05-11 00:10:56.128 +03 [671] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-05-11 00:10:56.161 +03 [671] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-05-11 00:10:56.219 +03 [920] LOG:  database system was shut down at 2025-05-09 15:30:18 +03
+2025-05-11 00:10:56.261 +03 [671] LOG:  database system is ready to accept connections
+2025-05-11 00:45:31.890 +03 [671] LOG:  received fast shutdown request
+2025-05-11 00:45:31.910 +03 [671] LOG:  aborting any active transactions
+2025-05-11 00:45:31.911 +03 [671] LOG:  background worker "logical replication launcher" (PID 959) exited with exit code 1
+2025-05-11 00:45:31.912 +03 [954] LOG:  shutting down
+2025-05-11 00:45:32.035 +03 [671] LOG:  database system is shut down
+2025-05-12 13:33:18.064 +03 [666] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-05-12 13:33:18.607 +03 [666] LOG:  listening on IPv6 address "::1", port 5432
+2025-05-12 13:33:18.607 +03 [666] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-05-12 13:33:18.644 +03 [666] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-05-12 13:33:18.696 +03 [956] LOG:  database system was shut down at 2025-05-11 00:45:32 +03
+2025-05-12 13:33:18.730 +03 [666] LOG:  database system is ready to accept connections
+2025-05-12 14:07:07.014 +03 [666] LOG:  received fast shutdown request
+2025-05-12 14:07:07.029 +03 [666] LOG:  aborting any active transactions
+2025-05-12 14:07:07.030 +03 [666] LOG:  background worker "logical replication launcher" (PID 971) exited with exit code 1
+2025-05-12 14:07:07.031 +03 [966] LOG:  shutting down
+2025-05-12 14:07:07.134 +03 [666] LOG:  database system is shut down
+2025-05-12 14:07:35.432 +03 [691] LOG:  invalid value for parameter "lc_messages": "tr_TR.UTF-8"
+2025-05-12 14:07:35.438 +03 [691] LOG:  invalid value for parameter "lc_monetary": "tr_TR.UTF-8"
+2025-05-12 14:07:35.438 +03 [691] LOG:  invalid value for parameter "lc_numeric": "tr_TR.UTF-8"
+2025-05-12 14:07:35.438 +03 [691] LOG:  invalid value for parameter "lc_time": "tr_TR.UTF-8"
+2025-05-12 14:07:35.438 +03 [691] FATAL:  configuration file "/home/pi/enfiproV2/pgsql14_data/postgresql.conf" contains errors
+2025-05-12 14:07:40.776 +03 [1283] LOG:  invalid value for parameter "lc_messages": "tr_TR.UTF-8"
+2025-05-12 14:07:40.776 +03 [1283] LOG:  invalid value for parameter "lc_monetary": "tr_TR.UTF-8"
+2025-05-12 14:07:40.776 +03 [1283] LOG:  invalid value for parameter "lc_numeric": "tr_TR.UTF-8"
+2025-05-12 14:07:40.776 +03 [1283] LOG:  invalid value for parameter "lc_time": "tr_TR.UTF-8"
+2025-05-12 14:07:40.776 +03 [1283] FATAL:  configuration file "/home/pi/enfiproV2/pgsql14_data/postgresql.conf" contains errors
+2025-05-12 14:07:46.161 +03 [1632] LOG:  invalid value for parameter "lc_messages": "tr_TR.UTF-8"
+2025-05-12 14:07:46.161 +03 [1632] LOG:  invalid value for parameter "lc_monetary": "tr_TR.UTF-8"
+2025-05-12 14:07:46.161 +03 [1632] LOG:  invalid value for parameter "lc_numeric": "tr_TR.UTF-8"
+2025-05-12 14:07:46.170 +03 [1632] LOG:  invalid value for parameter "lc_time": "tr_TR.UTF-8"
+2025-05-12 14:07:46.170 +03 [1632] FATAL:  configuration file "/home/pi/enfiproV2/pgsql14_data/postgresql.conf" contains errors
+2025-05-12 14:07:51.499 +03 [1777] LOG:  invalid value for parameter "lc_messages": "tr_TR.UTF-8"
+2025-05-12 14:07:51.499 +03 [1777] LOG:  invalid value for parameter "lc_monetary": "tr_TR.UTF-8"
+2025-05-12 14:07:51.499 +03 [1777] LOG:  invalid value for parameter "lc_numeric": "tr_TR.UTF-8"
+2025-05-12 14:07:51.500 +03 [1777] LOG:  invalid value for parameter "lc_time": "tr_TR.UTF-8"
+2025-05-12 14:07:51.500 +03 [1777] FATAL:  configuration file "/home/pi/enfiproV2/pgsql14_data/postgresql.conf" contains errors
+2025-05-12 14:07:56.893 +03 [1790] LOG:  invalid value for parameter "lc_messages": "tr_TR.UTF-8"
+2025-05-12 14:07:56.893 +03 [1790] LOG:  invalid value for parameter "lc_monetary": "tr_TR.UTF-8"
+2025-05-12 14:07:56.893 +03 [1790] LOG:  invalid value for parameter "lc_numeric": "tr_TR.UTF-8"
+2025-05-12 14:07:56.893 +03 [1790] LOG:  invalid value for parameter "lc_time": "tr_TR.UTF-8"
+2025-05-12 14:07:56.893 +03 [1790] FATAL:  configuration file "/home/pi/enfiproV2/pgsql14_data/postgresql.conf" contains errors
+2025-05-12 14:08:02.242 +03 [1799] LOG:  invalid value for parameter "lc_messages": "tr_TR.UTF-8"
+2025-05-12 14:08:02.242 +03 [1799] LOG:  invalid value for parameter "lc_monetary": "tr_TR.UTF-8"
+2025-05-12 14:08:02.242 +03 [1799] LOG:  invalid value for parameter "lc_numeric": "tr_TR.UTF-8"
+2025-05-12 14:08:02.242 +03 [1799] LOG:  invalid value for parameter "lc_time": "tr_TR.UTF-8"
+2025-05-12 14:08:02.242 +03 [1799] FATAL:  configuration file "/home/pi/enfiproV2/pgsql14_data/postgresql.conf" contains errors
+2025-05-12 14:08:07.625 +03 [1823] LOG:  invalid value for parameter "lc_messages": "tr_TR.UTF-8"
+2025-05-12 14:08:07.626 +03 [1823] LOG:  invalid value for parameter "lc_monetary": "tr_TR.UTF-8"
+2025-05-12 14:08:07.626 +03 [1823] LOG:  invalid value for parameter "lc_numeric": "tr_TR.UTF-8"
+2025-05-12 14:08:07.626 +03 [1823] LOG:  invalid value for parameter "lc_time": "tr_TR.UTF-8"
+2025-05-12 14:08:07.626 +03 [1823] FATAL:  configuration file "/home/pi/enfiproV2/pgsql14_data/postgresql.conf" contains errors
+2025-05-12 14:08:12.981 +03 [1841] LOG:  invalid value for parameter "lc_messages": "tr_TR.UTF-8"
+2025-05-12 14:08:12.981 +03 [1841] LOG:  invalid value for parameter "lc_monetary": "tr_TR.UTF-8"
+2025-05-12 14:08:12.981 +03 [1841] LOG:  invalid value for parameter "lc_numeric": "tr_TR.UTF-8"
+2025-05-12 14:08:12.981 +03 [1841] LOG:  invalid value for parameter "lc_time": "tr_TR.UTF-8"
+2025-05-12 14:08:12.981 +03 [1841] FATAL:  configuration file "/home/pi/enfiproV2/pgsql14_data/postgresql.conf" contains errors
+2025-05-12 14:08:18.347 +03 [1846] LOG:  invalid value for parameter "lc_messages": "tr_TR.UTF-8"
+2025-05-12 14:08:18.348 +03 [1846] LOG:  invalid value for parameter "lc_monetary": "tr_TR.UTF-8"
+2025-05-12 14:08:18.348 +03 [1846] LOG:  invalid value for parameter "lc_numeric": "tr_TR.UTF-8"
+2025-05-12 14:08:18.348 +03 [1846] LOG:  invalid value for parameter "lc_time": "tr_TR.UTF-8"
+2025-05-12 14:08:18.348 +03 [1846] FATAL:  configuration file "/home/pi/enfiproV2/pgsql14_data/postgresql.conf" contains errors
+2025-05-12 14:08:23.606 +03 [1863] LOG:  invalid value for parameter "lc_messages": "tr_TR.UTF-8"
+2025-05-12 14:08:23.606 +03 [1863] LOG:  invalid value for parameter "lc_monetary": "tr_TR.UTF-8"
+2025-05-12 14:08:23.606 +03 [1863] LOG:  invalid value for parameter "lc_numeric": "tr_TR.UTF-8"
+2025-05-12 14:08:23.606 +03 [1863] LOG:  invalid value for parameter "lc_time": "tr_TR.UTF-8"
+2025-05-12 14:08:23.606 +03 [1863] FATAL:  configuration file "/home/pi/enfiproV2/pgsql14_data/postgresql.conf" contains errors
+2025-05-12 14:08:28.855 +03 [1867] LOG:  invalid value for parameter "lc_messages": "tr_TR.UTF-8"
+2025-05-12 14:08:28.855 +03 [1867] LOG:  invalid value for parameter "lc_monetary": "tr_TR.UTF-8"
+2025-05-12 14:08:28.855 +03 [1867] LOG:  invalid value for parameter "lc_numeric": "tr_TR.UTF-8"
+2025-05-12 14:08:28.855 +03 [1867] LOG:  invalid value for parameter "lc_time": "tr_TR.UTF-8"
+2025-05-12 14:08:28.855 +03 [1867] FATAL:  configuration file "/home/pi/enfiproV2/pgsql14_data/postgresql.conf" contains errors
+2025-05-12 14:08:34.109 +03 [1892] LOG:  invalid value for parameter "lc_messages": "tr_TR.UTF-8"
+2025-05-12 14:08:34.109 +03 [1892] LOG:  invalid value for parameter "lc_monetary": "tr_TR.UTF-8"
+2025-05-12 14:08:34.109 +03 [1892] LOG:  invalid value for parameter "lc_numeric": "tr_TR.UTF-8"
+2025-05-12 14:08:34.109 +03 [1892] LOG:  invalid value for parameter "lc_time": "tr_TR.UTF-8"
+2025-05-12 14:08:34.110 +03 [1892] FATAL:  configuration file "/home/pi/enfiproV2/pgsql14_data/postgresql.conf" contains errors
+2025-05-12 14:08:39.366 +03 [1977] LOG:  invalid value for parameter "lc_messages": "tr_TR.UTF-8"
+2025-05-12 14:08:39.366 +03 [1977] LOG:  invalid value for parameter "lc_monetary": "tr_TR.UTF-8"
+2025-05-12 14:08:39.366 +03 [1977] LOG:  invalid value for parameter "lc_numeric": "tr_TR.UTF-8"
+2025-05-12 14:08:39.366 +03 [1977] LOG:  invalid value for parameter "lc_time": "tr_TR.UTF-8"
+2025-05-12 14:08:39.366 +03 [1977] FATAL:  configuration file "/home/pi/enfiproV2/pgsql14_data/postgresql.conf" contains errors
+2025-05-12 14:08:44.605 +03 [1981] LOG:  invalid value for parameter "lc_messages": "tr_TR.UTF-8"
+2025-05-12 14:08:44.605 +03 [1981] LOG:  invalid value for parameter "lc_monetary": "tr_TR.UTF-8"
+2025-05-12 14:08:44.605 +03 [1981] LOG:  invalid value for parameter "lc_numeric": "tr_TR.UTF-8"
+2025-05-12 14:08:44.605 +03 [1981] LOG:  invalid value for parameter "lc_time": "tr_TR.UTF-8"
+2025-05-12 14:08:44.605 +03 [1981] FATAL:  configuration file "/home/pi/enfiproV2/pgsql14_data/postgresql.conf" contains errors
+2025-05-12 14:08:49.864 +03 [2167] LOG:  invalid value for parameter "lc_messages": "tr_TR.UTF-8"
+2025-05-12 14:08:49.864 +03 [2167] LOG:  invalid value for parameter "lc_monetary": "tr_TR.UTF-8"
+2025-05-12 14:08:49.864 +03 [2167] LOG:  invalid value for parameter "lc_numeric": "tr_TR.UTF-8"
+2025-05-12 14:08:49.864 +03 [2167] LOG:  invalid value for parameter "lc_time": "tr_TR.UTF-8"
+2025-05-12 14:08:49.864 +03 [2167] FATAL:  configuration file "/home/pi/enfiproV2/pgsql14_data/postgresql.conf" contains errors
+2025-05-12 14:08:55.119 +03 [2592] LOG:  invalid value for parameter "lc_messages": "tr_TR.UTF-8"
+2025-05-12 14:08:55.119 +03 [2592] LOG:  invalid value for parameter "lc_monetary": "tr_TR.UTF-8"
+2025-05-12 14:08:55.119 +03 [2592] LOG:  invalid value for parameter "lc_numeric": "tr_TR.UTF-8"
+2025-05-12 14:08:55.119 +03 [2592] LOG:  invalid value for parameter "lc_time": "tr_TR.UTF-8"
+2025-05-12 14:08:55.119 +03 [2592] FATAL:  configuration file "/home/pi/enfiproV2/pgsql14_data/postgresql.conf" contains errors
+2025-05-12 14:09:00.365 +03 [2624] LOG:  invalid value for parameter "lc_messages": "tr_TR.UTF-8"
+2025-05-12 14:09:00.365 +03 [2624] LOG:  invalid value for parameter "lc_monetary": "tr_TR.UTF-8"
+2025-05-12 14:09:00.365 +03 [2624] LOG:  invalid value for parameter "lc_numeric": "tr_TR.UTF-8"
+2025-05-12 14:09:00.365 +03 [2624] LOG:  invalid value for parameter "lc_time": "tr_TR.UTF-8"
+2025-05-12 14:09:00.365 +03 [2624] FATAL:  configuration file "/home/pi/enfiproV2/pgsql14_data/postgresql.conf" contains errors
+2025-05-12 14:09:05.705 +03 [2637] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-05-12 14:09:05.706 +03 [2637] LOG:  listening on IPv6 address "::1", port 5432
+2025-05-12 14:09:05.706 +03 [2637] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-05-12 14:09:05.942 +03 [2637] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-05-12 14:09:06.012 +03 [2662] LOG:  database system was shut down at 2025-05-12 14:07:07 +03
+2025-05-12 14:09:06.047 +03 [2637] LOG:  database system is ready to accept connections
+2025-05-12 14:09:06.417 +03 [2637] LOG:  received fast shutdown request
+2025-05-12 14:09:06.457 +03 [2637] LOG:  aborting any active transactions
+2025-05-12 14:09:06.476 +03 [2637] LOG:  background worker "logical replication launcher" (PID 2672) exited with exit code 1
+2025-05-12 14:09:06.479 +03 [2667] LOG:  shutting down
+2025-05-12 14:09:06.596 +03 [2637] LOG:  database system is shut down
+2025-05-12 14:09:36.653 +03 [700] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-05-12 14:09:36.826 +03 [700] LOG:  listening on IPv6 address "::1", port 5432
+2025-05-12 14:09:36.826 +03 [700] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-05-12 14:09:36.866 +03 [700] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-05-12 14:09:36.945 +03 [942] LOG:  database system was shut down at 2025-05-12 14:09:06 +03
+2025-05-12 14:09:37.017 +03 [700] LOG:  database system is ready to accept connections
+2025-05-12 14:10:20.436 +03 [700] LOG:  received fast shutdown request
+2025-05-12 14:10:20.458 +03 [700] LOG:  aborting any active transactions
+2025-05-12 14:10:20.461 +03 [700] LOG:  background worker "logical replication launcher" (PID 956) exited with exit code 1
+2025-05-12 14:10:20.461 +03 [951] LOG:  shutting down
+2025-05-12 14:10:20.598 +03 [700] LOG:  database system is shut down
+2025-05-12 14:10:47.003 +03 [692] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-05-12 14:10:47.008 +03 [692] LOG:  listening on IPv6 address "::1", port 5432
+2025-05-12 14:10:47.008 +03 [692] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-05-12 14:10:47.076 +03 [692] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-05-12 14:10:47.152 +03 [908] LOG:  database system was shut down at 2025-05-12 14:10:20 +03
+2025-05-12 14:10:47.211 +03 [692] LOG:  database system is ready to accept connections
+2025-05-12 14:15:22.618 +03 [692] LOG:  received fast shutdown request
+2025-05-12 14:15:22.630 +03 [692] LOG:  aborting any active transactions
+2025-05-12 14:15:22.632 +03 [692] LOG:  background worker "logical replication launcher" (PID 935) exited with exit code 1
+2025-05-12 14:15:22.632 +03 [930] LOG:  shutting down
+2025-05-12 14:15:22.758 +03 [692] LOG:  database system is shut down
+2025-05-12 14:15:52.959 +03 [669] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-05-12 14:15:53.280 +03 [669] LOG:  listening on IPv6 address "::1", port 5432
+2025-05-12 14:15:53.280 +03 [669] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-05-12 14:15:53.309 +03 [669] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-05-12 14:15:53.356 +03 [965] LOG:  database system was shut down at 2025-05-12 14:15:22 +03
+2025-05-12 14:15:53.378 +03 [669] LOG:  database system is ready to accept connections
+2025-05-12 23:23:02.051 +03 [669] LOG:  received fast shutdown request
+2025-05-12 23:23:02.067 +03 [669] LOG:  aborting any active transactions
+2025-05-12 23:23:02.070 +03 [669] LOG:  background worker "logical replication launcher" (PID 979) exited with exit code 1
+2025-05-12 23:23:02.070 +03 [973] LOG:  shutting down
+2025-05-12 23:23:02.224 +03 [669] LOG:  database system is shut down
+2025-05-12 23:59:04.056 +03 [663] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-05-12 23:59:04.153 +03 [663] LOG:  listening on IPv6 address "::1", port 5432
+2025-05-12 23:59:04.153 +03 [663] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-05-12 23:59:04.184 +03 [663] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-05-12 23:59:04.238 +03 [814] LOG:  database system was shut down at 2025-05-12 23:23:02 +03
+2025-05-12 23:59:04.301 +03 [663] LOG:  database system is ready to accept connections
+2025-05-13 00:23:36.097 +03 [663] LOG:  received fast shutdown request
+2025-05-13 00:23:36.109 +03 [663] LOG:  aborting any active transactions
+2025-05-13 00:23:36.112 +03 [663] LOG:  background worker "logical replication launcher" (PID 840) exited with exit code 1
+2025-05-13 00:23:36.112 +03 [835] LOG:  shutting down
+2025-05-13 00:23:36.250 +03 [663] LOG:  database system is shut down
+2025-05-13 01:30:14.957 +03 [693] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-05-13 01:30:15.339 +03 [693] LOG:  listening on IPv6 address "::1", port 5432
+2025-05-13 01:30:15.339 +03 [693] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-05-13 01:30:15.381 +03 [693] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-05-13 01:30:15.458 +03 [948] LOG:  database system was shut down at 2025-05-13 00:23:36 +03
+2025-05-13 01:30:15.519 +03 [693] LOG:  database system is ready to accept connections
+2025-05-13 08:25:26.323 +03 [693] LOG:  received fast shutdown request
+2025-05-13 08:25:26.335 +03 [693] LOG:  aborting any active transactions
+2025-05-13 08:25:26.337 +03 [693] LOG:  background worker "logical replication launcher" (PID 963) exited with exit code 1
+2025-05-13 08:25:26.337 +03 [958] LOG:  shutting down
+2025-05-13 08:25:26.434 +03 [693] LOG:  database system is shut down
+2025-05-13 09:56:17.257 +03 [681] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-05-13 09:56:17.338 +03 [681] LOG:  listening on IPv6 address "::1", port 5432
+2025-05-13 09:56:17.338 +03 [681] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-05-13 09:56:17.395 +03 [681] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-05-13 09:56:17.467 +03 [882] LOG:  database system was shut down at 2025-05-13 08:25:26 +03
+2025-05-13 09:56:17.536 +03 [681] LOG:  database system is ready to accept connections
+2025-05-13 13:48:28.046 +03 [681] LOG:  received fast shutdown request
+2025-05-13 13:48:28.059 +03 [681] LOG:  aborting any active transactions
+2025-05-13 13:48:28.061 +03 [681] LOG:  background worker "logical replication launcher" (PID 939) exited with exit code 1
+2025-05-13 13:48:28.061 +03 [934] LOG:  shutting down
+2025-05-13 13:48:28.184 +03 [681] LOG:  database system is shut down
+2025-05-13 13:49:00.778 +03 [675] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-05-13 13:49:00.843 +03 [675] LOG:  listening on IPv6 address "::1", port 5432
+2025-05-13 13:49:00.843 +03 [675] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-05-13 13:49:00.891 +03 [675] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-05-13 13:49:01.296 +03 [884] LOG:  database system was shut down at 2025-05-13 13:48:28 +03
+2025-05-13 13:49:01.345 +03 [675] LOG:  database system is ready to accept connections
+2025-05-13 17:17:06.002 +03 [675] LOG:  received fast shutdown request
+2025-05-13 17:17:06.018 +03 [675] LOG:  aborting any active transactions
+2025-05-13 17:17:06.020 +03 [675] LOG:  background worker "logical replication launcher" (PID 959) exited with exit code 1
+2025-05-13 17:17:06.022 +03 [954] LOG:  shutting down
+2025-05-13 17:17:06.132 +03 [675] LOG:  database system is shut down
+2025-05-14 19:46:27.292 +03 [695] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-05-14 19:46:27.348 +03 [695] LOG:  listening on IPv6 address "::1", port 5432
+2025-05-14 19:46:27.349 +03 [695] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-05-14 19:46:27.397 +03 [695] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-05-14 19:46:27.505 +03 [948] LOG:  database system was shut down at 2025-05-13 17:17:06 +03
+2025-05-14 19:46:27.563 +03 [695] LOG:  database system is ready to accept connections
+2025-05-14 21:35:39.362 +03 [695] LOG:  received fast shutdown request
+2025-05-14 21:35:39.375 +03 [695] LOG:  aborting any active transactions
+2025-05-14 21:35:39.378 +03 [695] LOG:  background worker "logical replication launcher" (PID 960) exited with exit code 1
+2025-05-14 21:35:39.378 +03 [955] LOG:  shutting down
+2025-05-14 21:35:39.481 +03 [695] LOG:  database system is shut down
+2025-05-14 21:36:10.714 +03 [708] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-05-14 21:36:11.154 +03 [708] LOG:  listening on IPv6 address "::1", port 5432
+2025-05-14 21:36:11.154 +03 [708] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-05-14 21:36:11.198 +03 [708] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-05-14 21:36:11.263 +03 [953] LOG:  database system was shut down at 2025-05-14 21:35:39 +03
+2025-05-14 21:36:11.292 +03 [708] LOG:  database system is ready to accept connections
+2025-05-14 21:47:38.772 +03 [708] LOG:  received fast shutdown request
+2025-05-14 21:47:38.784 +03 [708] LOG:  aborting any active transactions
+2025-05-14 21:47:38.785 +03 [708] LOG:  background worker "logical replication launcher" (PID 966) exited with exit code 1
+2025-05-14 21:47:38.786 +03 [961] LOG:  shutting down
+2025-05-14 21:47:38.898 +03 [708] LOG:  database system is shut down
+2025-05-14 21:48:09.541 +03 [643] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-05-14 21:48:09.565 +03 [643] LOG:  listening on IPv6 address "::1", port 5432
+2025-05-14 21:48:09.565 +03 [643] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-05-14 21:48:09.587 +03 [643] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-05-14 21:48:09.918 +03 [675] LOG:  database system was shut down at 2025-05-14 21:47:38 +03
+2025-05-14 21:48:10.701 +03 [643] LOG:  database system is ready to accept connections
+2025-05-14 22:04:44.880 +03 [643] LOG:  received fast shutdown request
+2025-05-14 22:04:44.896 +03 [643] LOG:  aborting any active transactions
+2025-05-14 22:04:44.899 +03 [643] LOG:  background worker "logical replication launcher" (PID 687) exited with exit code 1
+2025-05-14 22:04:44.899 +03 [682] LOG:  shutting down
+2025-05-14 22:04:45.027 +03 [643] LOG:  database system is shut down
+2025-05-14 22:05:17.929 +03 [646] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-05-14 22:05:18.157 +03 [646] LOG:  listening on IPv6 address "::1", port 5432
+2025-05-14 22:05:18.157 +03 [646] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-05-14 22:05:18.570 +03 [646] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-05-14 22:05:18.991 +03 [684] LOG:  database system was shut down at 2025-05-14 22:04:45 +03
+2025-05-14 22:05:19.035 +03 [646] LOG:  database system is ready to accept connections
+2025-05-14 22:27:34.937 +03 [646] LOG:  received fast shutdown request
+2025-05-14 22:27:34.948 +03 [646] LOG:  aborting any active transactions
+2025-05-14 22:27:34.951 +03 [646] LOG:  background worker "logical replication launcher" (PID 692) exited with exit code 1
+2025-05-14 22:27:34.951 +03 [687] LOG:  shutting down
+2025-05-14 22:27:35.044 +03 [646] LOG:  database system is shut down
+2025-05-15 11:44:33.736 +03 [644] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-05-15 11:44:33.746 +03 [644] LOG:  listening on IPv6 address "::1", port 5432
+2025-05-15 11:44:33.746 +03 [644] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-05-15 11:44:33.775 +03 [644] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-05-15 11:44:33.819 +03 [655] LOG:  database system was shut down at 2025-05-14 22:27:35 +03
+2025-05-15 11:44:33.884 +03 [644] LOG:  database system is ready to accept connections
+2025-05-15 12:04:53.258 +03 [644] LOG:  received fast shutdown request
+2025-05-15 12:04:53.277 +03 [644] LOG:  aborting any active transactions
+2025-05-15 12:04:53.280 +03 [644] LOG:  background worker "logical replication launcher" (PID 663) exited with exit code 1
+2025-05-15 12:04:53.280 +03 [658] LOG:  shutting down
+2025-05-15 12:04:53.400 +03 [644] LOG:  database system is shut down
+2025-05-22 12:45:00.666 +03 [636] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-05-22 12:45:00.973 +03 [636] LOG:  listening on IPv6 address "::1", port 5432
+2025-05-22 12:45:00.973 +03 [636] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-05-22 12:45:01.775 +03 [636] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-05-22 12:45:01.836 +03 [676] LOG:  database system was shut down at 2025-05-15 12:04:53 +03
+2025-05-22 12:45:01.868 +03 [636] LOG:  database system is ready to accept connections
+2025-05-22 15:50:04.581 +03 [636] LOG:  received fast shutdown request
+2025-05-22 15:50:04.593 +03 [636] LOG:  aborting any active transactions
+2025-05-22 15:50:04.595 +03 [636] LOG:  background worker "logical replication launcher" (PID 683) exited with exit code 1
+2025-05-22 15:50:04.595 +03 [678] LOG:  shutting down
+2025-05-22 15:50:04.716 +03 [636] LOG:  database system is shut down
+2025-06-25 10:30:28.772 +03 [646] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-06-25 10:30:28.775 +03 [646] LOG:  listening on IPv6 address "::1", port 5432
+2025-06-25 10:30:28.775 +03 [646] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-06-25 10:30:28.803 +03 [646] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-06-25 10:30:28.857 +03 [662] LOG:  database system was shut down at 2025-05-22 15:50:04 +03
+2025-06-25 10:30:28.880 +03 [646] LOG:  database system is ready to accept connections
+2025-06-27 16:35:59.753 +03 [646] LOG:  received fast shutdown request
+2025-06-27 16:35:59.769 +03 [646] LOG:  aborting any active transactions
+2025-06-27 16:35:59.771 +03 [646] LOG:  background worker "logical replication launcher" (PID 668) exited with exit code 1
+2025-06-27 16:35:59.771 +03 [663] LOG:  shutting down
+2025-06-27 16:35:59.870 +03 [646] LOG:  database system is shut down
+2025-07-14 11:11:06.855 +03 [650] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-07-14 11:11:07.133 +03 [650] LOG:  listening on IPv6 address "::1", port 5432
+2025-07-14 11:11:07.133 +03 [650] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-07-14 11:11:07.553 +03 [650] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-07-14 11:11:07.992 +03 [695] LOG:  database system was shut down at 2025-06-27 16:35:59 +03
+2025-07-14 11:11:08.020 +03 [650] LOG:  database system is ready to accept connections
+2025-07-14 11:28:04.169 +03 [650] LOG:  received fast shutdown request
+2025-07-14 11:28:04.185 +03 [650] LOG:  aborting any active transactions
+2025-07-14 11:28:04.188 +03 [650] LOG:  background worker "logical replication launcher" (PID 701) exited with exit code 1
+2025-07-14 11:28:04.189 +03 [696] LOG:  shutting down
+2025-07-14 11:28:04.276 +03 [650] LOG:  database system is shut down
+2025-07-14 11:28:30.611 +03 [645] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-07-14 11:28:30.904 +03 [645] LOG:  listening on IPv6 address "::1", port 5432
+2025-07-14 11:28:30.904 +03 [645] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-07-14 11:28:30.933 +03 [645] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-07-14 11:28:31.336 +03 [684] LOG:  database system was shut down at 2025-07-14 11:28:04 +03
+2025-07-14 11:28:31.362 +03 [645] LOG:  database system is ready to accept connections
+2025-07-14 11:47:23.018 +03 [645] LOG:  received fast shutdown request
+2025-07-14 11:47:23.029 +03 [645] LOG:  aborting any active transactions
+2025-07-14 11:47:23.030 +03 [645] LOG:  background worker "logical replication launcher" (PID 690) exited with exit code 1
+2025-07-14 11:47:23.032 +03 [685] LOG:  shutting down
+2025-07-14 11:47:23.154 +03 [645] LOG:  database system is shut down
+2025-07-14 11:47:51.771 +03 [650] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-07-14 11:47:52.087 +03 [650] LOG:  listening on IPv6 address "::1", port 5432
+2025-07-14 11:47:52.087 +03 [650] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-07-14 11:47:52.495 +03 [650] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-07-14 11:47:52.931 +03 [692] LOG:  database system was shut down at 2025-07-14 11:47:23 +03
+2025-07-14 11:47:52.967 +03 [650] LOG:  database system is ready to accept connections
+2025-07-14 12:22:14.730 +03 [650] LOG:  received fast shutdown request
+2025-07-14 12:22:14.745 +03 [650] LOG:  aborting any active transactions
+2025-07-14 12:22:14.747 +03 [650] LOG:  background worker "logical replication launcher" (PID 699) exited with exit code 1
+2025-07-14 12:22:14.747 +03 [694] LOG:  shutting down
+2025-07-14 12:22:14.864 +03 [650] LOG:  database system is shut down
+2025-07-14 12:22:43.739 +03 [649] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-07-14 12:22:43.743 +03 [649] LOG:  listening on IPv6 address "::1", port 5432
+2025-07-14 12:22:43.743 +03 [649] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-07-14 12:22:43.793 +03 [649] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-07-14 12:22:43.855 +03 [667] LOG:  database system was shut down at 2025-07-14 12:22:14 +03
+2025-07-14 12:22:43.888 +03 [649] LOG:  database system is ready to accept connections
+2025-07-14 12:31:53.321 +03 [649] LOG:  received fast shutdown request
+2025-07-14 12:31:53.332 +03 [649] LOG:  aborting any active transactions
+2025-07-14 12:31:53.334 +03 [649] LOG:  background worker "logical replication launcher" (PID 675) exited with exit code 1
+2025-07-14 12:31:53.334 +03 [670] LOG:  shutting down
+2025-07-14 12:31:53.470 +03 [649] LOG:  database system is shut down
+2025-07-14 12:32:20.469 +03 [646] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-07-14 12:32:20.478 +03 [646] LOG:  listening on IPv6 address "::1", port 5432
+2025-07-14 12:32:20.478 +03 [646] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-07-14 12:32:20.527 +03 [646] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-07-14 12:32:20.598 +03 [661] LOG:  database system was shut down at 2025-07-14 12:31:53 +03
+2025-07-14 12:32:20.646 +03 [646] LOG:  database system is ready to accept connections
+2025-07-14 19:10:33.158 +03 [646] LOG:  received fast shutdown request
+2025-07-14 19:10:33.184 +03 [646] LOG:  aborting any active transactions
+2025-07-14 19:10:33.186 +03 [646] LOG:  background worker "logical replication launcher" (PID 671) exited with exit code 1
+2025-07-14 19:10:33.187 +03 [666] LOG:  shutting down
+2025-07-14 19:10:33.303 +03 [646] LOG:  database system is shut down
+2025-07-15 07:49:55.563 +03 [653] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-07-15 07:49:55.575 +03 [653] LOG:  listening on IPv6 address "::1", port 5432
+2025-07-15 07:49:55.575 +03 [653] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-07-15 07:49:55.617 +03 [653] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-07-15 07:49:55.691 +03 [679] LOG:  database system was shut down at 2025-07-14 19:10:33 +03
+2025-07-15 07:49:55.733 +03 [653] LOG:  database system is ready to accept connections
+2025-07-16 02:47:54.358 +03 [653] LOG:  received fast shutdown request
+2025-07-16 02:47:54.369 +03 [653] LOG:  aborting any active transactions
+2025-07-16 02:47:54.371 +03 [653] LOG:  background worker "logical replication launcher" (PID 686) exited with exit code 1
+2025-07-16 02:47:54.371 +03 [681] LOG:  shutting down
+2025-07-16 02:47:54.468 +03 [653] LOG:  database system is shut down
+2025-07-16 02:48:27.738 +03 [650] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-07-16 02:48:28.043 +03 [650] LOG:  listening on IPv6 address "::1", port 5432
+2025-07-16 02:48:28.043 +03 [650] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-07-16 02:48:28.068 +03 [650] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-07-16 02:48:28.868 +03 [686] LOG:  database system was shut down at 2025-07-16 02:47:54 +03
+2025-07-16 02:48:28.891 +03 [650] LOG:  database system is ready to accept connections

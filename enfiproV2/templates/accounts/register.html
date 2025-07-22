@@ -1,0 +1,34 @@
+{% extends "pos/base.html" %}
+
+{% block title %}Kayıt Ol{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">Yeni Hesap Oluştur</div>
+            <div class="card-body">
+                {% if msg %}
+                    <div class="alert alert-danger">{{ msg }}</div>
+                {% endif %}
+                
+                <form method="POST">
+                    {% csrf_token %}
+                    {% for field in form %}
+                        <div class="form-group">
+                            <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                            {{ field }}
+                            {% if field.errors %}
+                                <div class="text-danger">
+                                    {{ field.errors.0 }}
+                                </div>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                    <button type="submit" class="btn btn-success">Kayıt Ol</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

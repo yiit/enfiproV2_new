@@ -1,0 +1,260 @@
+{% extends "pos/base.html" %}
+{% load static %}
+
+{% block title %}Ürün Ekle{% endblock title %}
+
+{% block stylesheets %}
+<link href="{% static 'css/label.css' %}" rel="stylesheet">
+<style>
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 34px;
+        height: 20px;
+    }
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: .4s;
+        border-radius: 20px;
+    }
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 14px;
+        width: 14px;
+        left: 3px;
+        bottom: 3px;
+        background-color: white;
+        transition: .4s;
+        border-radius: 50%;
+    }
+    input:checked + .slider {
+        background-color: #4caf50;
+    }
+    input:checked + .slider:before {
+        transform: translateX(14px);
+    }
+
+    /* Başlık renkleri */
+    .field-label {
+        color: #aaa; /* Pasif renk */
+        transition: color 0.3s ease-in-out;
+    }
+    .field-label.active {
+        color: #000; /* Aktif renk */
+    }
+
+    /* Input gizle/göster */
+    .field-input {
+        display: none;
+    }
+    .field-input.active {
+        display: block;
+    }
+</style>
+{% endblock stylesheets %}
+
+{% block heading %}Ürün Ekle{% endblock heading %}
+
+{% block content %}
+<!-- Gizli input, backend'den gelen mevcut değeri içerir -->
+
+
+<div class="row ml-0 mb-3">
+    <a href="{% url 'products:products_list' %}">
+        <button type="button" class="btn btn-info font-weight-bold">
+            <i class="fas fa-long-arrow-alt-left mr-2"></i>
+            Geri
+        </button>
+    </a>
+</div>
+
+<div class="row">
+    <div class="card col-md-8">
+        <div class="card-body">
+            <form action="{% url 'products:products_add' %}" method="post">
+                {% csrf_token %}
+
+                <!-- Dropdown Fields -->
+                <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="state" class="m-0 font-weight-bold text-primary">Durum</label>
+                    <select name="state" class="form-control" required>
+                        {% for status in product_status %}
+                            <option value="{{ status.0 }}">{{ status.1 }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label for="category" class="m-0 font-weight-bold text-primary">Kategori</label>
+                    <select name="category" class="form-control" required>
+                        <option value="" selected disabled hidden>Kategori Seçimi</option>
+                        {% for category in categories %}
+                             <option value="{{ category.id }}">{{ category.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                </div>
+
+                <!-- General Input Fields -->
+                <!--{% for field in general_fields %}
+                <div class="form-group col-md-8">
+                    <label for="input{{ field.name }}" class="m-0 font-weight-bold text-primary">{{ field.label }}</label>
+                    <input type="{{ field.type }}" name="{{ field.name }}" step="any" class="form-control" placeholder="" required>
+                </div>
+                {% endfor %}-->
+
+                {% for field in fields %}
+                <div class="form-group col-md-{{ field.size|default:8 }}">
+                    <div class="d-flex align-items-center">
+                        <!-- Toggle Switch -->
+                        <label class="switch mr-2">
+                            <input type="checkbox" id="toggle_{{ field.name }}" class="toggle-field" data-target="{{ field.name }}" {% if field.value %}checked{% endif %}>
+                            <span class="slider"></span>
+                        </label>
+                        <!-- Başlık -->
+                        <label for="{{ field.name }}" class="m-0 font-weight-bold field-label {% if field.value %}active{% endif %}">
+                            {{ field.label }}
+                        </label>
+                    </div>
+                    {% if field.name == "urun_etiket" %}
+                    <!-- PRN Dosyaları için Özel Select -->
+                    <select name="{{ field.name }}" id="{{ field.name }}" class="form-control field-input {% if field.value %}active{% endif %}">
+                        <option value="" selected hidden>Etiket Seçin</option>
+                    </select>
+
+                    {% elif field.name == "urun_top_etiket" %}
+                    <!-- PRN Dosyaları için Özel Select -->
+                    <select name="{{ field.name }}" id="{{ field.name }}" class="form-control field-input {% if field.value %}active{% endif %}">
+                        <option value="" selected hidden>Etiket Seçin</option>
+                    </select>
+
+                    {% elif field.is_textarea %}
+                    <textarea name="{{ field.name }}" id="{{ field.name }}" class="form-control field-input {% if field.value %}active{% endif %}" rows="2">{{ field.value }}</textarea>
+                    
+                    {% elif field.type == "select" %}
+                    <select name="{{ field.name }}" id="{{ field.name }}" class="form-control field-input {% if field.value %}active{% endif %}">
+                        {% for choice in field.choices %}
+                        <option value="{{ choice.0 }}" {% if choice.0 == field.value %}selected{% endif %}>{{ choice.1 }}</option>
+                        {% endfor %}
+                    </select>
+
+                    {% else %}
+                    <input  type="{{ field.type }}" 
+                            name="{{ field.name }}" 
+                            id="{{ field.name }}" 
+                            class="form-control field-input {% if field.value %}active{% endif %}" 
+                            value="{{ field.value }}"
+                            {% if field.type == "number" %} 
+                                step="{{ field.step|default:'any' }}" 
+                                min="0" 
+                            {% endif %}>
+                    {% endif %}
+                </div>
+                {% endfor %} 
+
+                <button type="submit" class="btn btn-success font-weight-bold">Ürün Oluştur</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+{% block javascripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Tüm toggle switch'leri seç
+        document.querySelectorAll('.toggle-field').forEach(toggle => {
+            const targetId = toggle.getAttribute('data-target');
+            const targetField = document.getElementById(targetId);
+            const fieldWrapper = targetField.closest('.form-group');
+            const fieldLabel = fieldWrapper.querySelector('.field-label'); // Başlık etiketi
+
+            // Toggle durum değişikliği
+            toggle.addEventListener('change', function () {
+                if (this.checked) {
+                    targetField.removeAttribute('disabled');
+                    targetField.classList.add('active'); // Görünür yap
+                    fieldLabel.classList.add('active'); // Canlı renk yap
+                } else {
+                    targetField.setAttribute('disabled', 'disabled');
+                    targetField.classList.remove('active'); // Gizle
+                    fieldLabel.classList.remove('active'); // Pasif renk yap
+                }
+            });
+
+            // Sayfa yüklendiğinde başlangıç durumu kontrol et
+            if (!toggle.checked) {
+                targetField.setAttribute('disabled', 'disabled');
+                targetField.classList.remove('active'); // Gizle
+                fieldLabel.classList.remove('active'); // Pasif renk yap
+            } else {
+                targetField.removeAttribute('disabled');
+                targetField.classList.add('active'); // Görünür yap
+                fieldLabel.classList.add('active'); // Canlı renk yap
+            }
+        });
+    });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const urunEtiketSelect = document.getElementById('urun_etiket');
+
+    // PRN dosyalarını almak için AJAX çağrısı
+    fetch('/products/get_eyz_prn_files/') // Django'daki view URL'si
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Dosyaları select alanına ekle
+                data.files.forEach(file => {
+                    const option = document.createElement('option');
+                    option.value = file;
+                    option.textContent = file;
+                    urunEtiketSelect.appendChild(option);
+                });
+            } else {
+                console.error('PRN dosyaları yüklenemedi:', data.message);
+            }
+        })
+        .catch(error => {
+            console.error('PRN dosyaları alınırken bir hata oluştu:', error);
+        });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const urunTopEtiketSelect = document.getElementById('urun_top_etiket');
+
+    // PRN dosyalarını almak için AJAX çağrısı
+    fetch('/products/get_top_prn_files/') // Django'daki view URL'si
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Dosyaları select alanına ekle
+                data.files.forEach(file => {
+                    const option = document.createElement('option');
+                    option.value = file;
+                    option.textContent = file;
+                    urunTopEtiketSelect.appendChild(option);
+                });
+            } else {
+                console.error('PRN dosyaları yüklenemedi:', data.message);
+            }
+        })
+        .catch(error => {
+            console.error('PRN dosyaları alınırken bir hata oluştu:', error);
+        });
+});
+
+</script>
+{% endblock javascripts %}

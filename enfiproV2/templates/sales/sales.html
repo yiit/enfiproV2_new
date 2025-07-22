@@ -1,0 +1,533 @@
+{% extends "pos/base.html" %}
+{% load static %}
+<!-- Page title  -->
+<!--{% block title %}Etiketleme{% endblock title %}-->
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}
+<!-- Datatables -->
+<link href="{% static 'vendor/datatables/dataTables.bootstrap4.min.css' %}" rel="stylesheet">
+<link href="{% static 'css/pagination_buttons.css' %}" rel="stylesheet">
+<style>
+    #weight {
+        font-size: 48px;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .stable {
+        color: green;
+    }
+
+    .unstable {
+        color: red;
+    }
+
+    #status {
+        font-size: 18px;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    select, button {
+        margin-top: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+{% endblock stylesheets %}
+
+<!-- Page Heading -->
+<!--{% block heading %}Etiketleme{% endblock heading %}-->
+
+<!-- Page content  -->
+{% block content %}
+
+    <!--Create new sale-->
+    <div class="row ml-0 mb-3">
+        <a href="{% url 'sales:sales_add' %}">
+            <button type="button" class="btn btn-success font-weight-bold">
+                    <i class="fas fa-plus mr-2"></i>
+                    Create new sale
+            </button>
+        </a>
+    </div>
+
+    <!-- DataTable -->
+    <div class="card shadow mb-12">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Etiketleme</h6>
+        </div>
+        <div class="card-header py-3">
+            <!-- <div id="status">Kurulum Yapılıyor...</div> -->
+            <!-- <select id="port-list" style="display: none;"></select> -->
+            <!-- <button id="request-port" style="display: none;">Request Port Access</button> -->
+            <!-- <button id="connect-button" style="display: none;">Connect</button> -->
+            <div id="weight" class="unstable">Teraziye Bağlanıyor...</div>
+        </div>        
+
+        <button id="print-button" class="btn btn-primary">
+            <i class="fas fa-print"></i>YAZDIR
+        </button>       
+        
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th style="width:5%">#</th>
+                            <th style="width:15%">ID</th>
+                            <th style="width:25%">Date</th>
+                            <th style="width:20%">Customer</th>
+                            <th class="text-center" style="width:10%">Total</th>
+                            <th class="text-center" style="width:5%">Items</th>
+                            <th class="text-center" style="width:10%">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for s in sales %}
+                        <tr>
+                            <td>{{forloop.counter}}</td>
+                            <td>{{s.id}}</td>
+                            <td>{{s.date_added}}</td>
+                            <td>{{s.customer.get_full_name}}</td>
+                            <td class="text-right" >{{s.grand_total}}</td>
+                            <td class="text-center" >{{s.sum_items}}</td>
+                            <td class="text-center">
+                                <!--View-->
+                                <a href="{% url 'sales:sales_details' s.id %}" class="text-decoration-none">
+                                    <button type="button" class="btn btn-info btn-sm" data-bs-toggle="tooltip" title="Update sale">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </a>
+                                <!--Yazdır receipt-->
+                                <a href="{% url 'sales:sales_receipt_pdf' s.id %}" class="text-decoration-none">
+                                    <button type="button" class="btn btn-dark btn-sm" data-bs-toggle="tooltip" title="View Receipt">
+                                        <i class="fas fa-receipt"></i>
+                                    </button>
+                                </a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+<!-- Datatables -->
+<script src="{% static 'vendor/datatables/jquery.dataTables.min.js' %}"></script>
+<script src="{% static 'vendor/datatables/dataTables.bootstrap4.min.js' %}"></script>
+<!--Datatable buttons-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/2.3.3/js/dataTables.buttons.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/2.3.3/js/buttons.colVis.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/2.3.3/js/buttons.html5.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/2.3.3/js/buttons.print.min.js"></script>
+<!--Moment JS-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+
+<!--Datatables-->
+<!--<script>
+    // Call the dataTables jQuery plugin
+    $(document).ready(function() {
+        tblCategories = $('#dataTable').DataTable({
+            dom: 'Bfrtip', // Buttons are draw at this element
+            buttons: [
+                {
+                extend: 'print',
+                text: 'Yazdır <i class="fas fa-file ml-2"></i>',
+                titleAttr: 'Yazdır',
+                className: 'btn btn-info',
+                exportOptions: {
+                    columns: [ 0, 1, 2, 3 ,4, 5]
+                }            
+                },
+                {
+                    extend: 'excelHtml5',
+                    text: 'İndir Excel <i class="fas fa-file-excel ml-2"></i>',
+                    titleAttr: 'İndir Excel',
+                    className: 'btn btn-success ml-2',
+                    exportOptions: {
+                        columns: [ 0, 1, 2, 3 ,4, 5 ]
+                    } 
+                },
+                {
+                    extend: 'pdfHtml5',
+                    text: 'İndir PDF <i class="fas fa-file-pdf ml-2"></i>',
+                    titleAttr: 'İndir PDF',
+                    className: 'btn btn-danger ml-2',
+                    download: 'open',
+                    orientation: 'vertical',
+                    pageSize: 'A4',
+                    title: '*',
+                    exportOptions: {
+                        columns: [ 0, 1, 2, 3 ,4 ,5]
+                    },
+                    customize: function (doc) {
+                        doc.styles = {
+                            header: {
+                                fontSize: 18,
+                                bold: true,
+                                alignment: 'center'
+                            },
+                            subheader: {
+                                fontSize: 13,
+                                bold: true
+                            },
+                            quote: {
+                                italics: true
+                            },
+                            small: {
+                                fontSize: 8
+                            },
+                            tableHeader: {
+                                bold: true,
+                                fontSize: 11,
+                                color: 'white',
+                                fillColor: '#2d4154',
+                                alignment: 'center'
+                            }
+                        };
+                        doc.content[1].table.widths = ['10%', '10%', '30%', '20%', '20%', '10%'];
+                        doc.content[1].margin = [0, 35, 0, 0];
+                        doc.content[1].layout = {};
+                        doc['footer'] = (function (page, pages) {
+                            return {
+                                columns: [
+                                    {
+                                        alignment: 'left',
+                                        text: ['Creation date: ', {text: moment().format('MM-DD-YYYY (HH:mm:ss)')}]
+                                    },
+                                    {
+                                        alignment: 'right',
+                                        text: ['page ', {text: page.toString()}, ' de ', {text: pages.toString()}]
+                                    }
+                                ],
+                                margin: 20
+                            }
+                        });
+
+                    }
+                }
+            ],
+            deferRender: true,
+            columnDefs: [
+                {
+                    targets: [-1], // column index (start from 0)
+                    orderable: false, // set orderable false for selected columns
+                }
+            ],
+        });
+    });
+</script>-->
+<script>
+const statusDisplay = document.getElementById('status');
+//const portList = document.getElementById('port-list');
+//const requestPortButton = document.getElementById('request-port');
+//const connectButton = document.getElementById('connect-button');
+const weightDisplay = document.getElementById('weight');
+
+let port = null;
+let reader = null;
+let previousWeight = null;
+let lastUpdateTime = Date.now(); // Son güncelleme zamanı
+let stableStartTime = null; // Stabil zaman başlangıcı
+const timeoutDuration = 6000; // Timeout süresi (ms)
+const stableDuration = 2000; // Stabil süre kontrolü (ms)
+const displayDuration = 2000; // Stabil gösterim süresi (ms)
+let displayingWeight = false; // Tartım ekranında yazdırma durumunu takip et
+let lastPrintedWeight = null; // Son yazdırılan ağırlığı saklar
+
+// Ürün ağırlık aralığı verilerini DOM'dan al
+function getProductRange() {
+    const urunMinField = document.getElementById('urun_min');
+    const urunMaxField = document.getElementById('urun_max');
+
+    const urunMin = 10; //parseFloat(urunMinField?.value || 0);
+    const urunMax = 20; // parseFloat(urunMaxField?.value || 0);
+
+    return { urun_min: urunMin, urun_max: urunMax };
+}
+
+// Sayfa yüklendiğinde otomatik olarak portları kontrol et
+/*window.addEventListener('load', async () => {
+    try {
+        const ports = await navigator.serial.getPorts(); // Daha önce izin verilmiş portları kontrol et
+        if (ports.length > 0) {
+            port = ports[0]; // İlk portu seç
+            await connectSerial(port); // Porta bağlan
+        } else {
+            statusDisplay.textContent = "No previously authorized ports found. Please request access.";
+            requestPortButton.style.display = "block"; // Port erişim düğmesini göster
+        }
+    } catch (error) {
+        statusDisplay.textContent = `Error initializing: ${error.message}`;
+    }
+});
+
+// "Request Port" düğmesine tıklanınca port erişimi iste
+requestPortButton.addEventListener('click', async () => {
+    try {
+        port = await navigator.serial.requestPort(); // Kullanıcıdan port erişim izni iste
+        statusDisplay.textContent = "Port access granted.";
+        requestPortButton.style.display = "none"; // Düğmeyi gizle
+        await connectSerial(port);
+    } catch (error) {
+        statusDisplay.textContent = `Error requesting access: ${error.message}`;
+    }
+});
+
+// "Connect" düğmesine tıklanınca seçilen portu bağla
+connectButton.addEventListener('click', async () => {
+    try {
+        const selectedIndex = portList.value;
+        const ports = await navigator.serial.getPorts();
+
+        if (!ports[selectedIndex]) {
+            throw new Error('Invalid port selected.');
+        }
+
+        port = ports[selectedIndex];
+        localStorage.setItem('selectedPort', selectedIndex); // Port bilgisini kaydet
+        await connectSerial(port);
+    } catch (error) {
+        statusDisplay.textContent = `Error connecting to port: ${error.message}`;
+    }
+});
+
+// Seri porta bağlan ve veri okumayı başlat
+async function connectSerial(selectedPort) {
+    try {
+        await selectedPort.open({
+            baudRate: 9600, // Baud hızı cihazınıza göre değiştirilebilir
+            dataBits: 8,
+            stopBits: 1,
+            parity: 'none'
+        });
+
+        statusDisplay.textContent = "Connected to port.";
+        statusDisplay.style.color = "green";
+        monitorTimeout(); // Timeout kontrol fonksiyonunu başlat
+        await readFromSerial(selectedPort);
+    } catch (error) {
+        statusDisplay.textContent = `Error opening port: ${error.message}`;
+    }
+}*/
+
+async function fetchDataFromNode() {
+    try {
+        const response = await fetch('http://localhost:3000/data'); // Node.js API endpoint
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const data = await response.json(); // JSON formatında yanıt al
+        console.log('Data received:', data);
+
+        // Veri işleme
+        const rawData = data.data; // "ST,GS,+    0.0kg"
+        const numericData = extractNumericData(rawData); // Sayısal veriyi ayıkla
+
+        if (numericData !== null) {
+            displayWeight(numericData); // Ekranda göster
+            checkStabilityAndDisplay(numericData); // Stabilite kontrolü
+        } else {
+            displayRawData(rawData); // Sayısal veri bulunamazsa ham veriyi göster
+        }
+    } catch (error) {
+        console.error('Error fetching data:', error);
+        statusDisplay.textContent = 'Error fetching data from Node.js.';
+        statusDisplay.style.color = 'red';
+    }
+}
+
+// Node.js'den veri almayı her saniyede bir tekrar et
+setInterval(fetchDataFromNode, 100);
+
+//monitorTimeout();
+
+// Seri porttan veri oku
+/*async function readFromSerial(selectedPort) {
+    const textDecoder = new TextDecoderStream();
+    const readableStreamClosed = selectedPort.readable.pipeTo(textDecoder.writable);
+    reader = textDecoder.readable.getReader();
+
+    let buffer = ''; // Gelen veriyi biriktirmek için buffer
+
+    try {
+        while (true) {
+            const { value, done } = await reader.read();
+            if (done) {
+                throw new Error('Serial port has been closed.');
+            }
+            if (value) {
+                console.log("Raw data received:", value); // Ham veriyi logla
+                buffer += value;
+
+                // Gelen veri sonlandırıcı karakter '\n' içeriyorsa işlem yap
+                if (buffer.includes('\n') || buffer.includes('\r')) {
+                    const lines = buffer.split(/\r?\n/); // Hem \n hem de \r\n sonlandırıcılarını destekle
+                    for (let i = 0; i < lines.length - 1; i++) {
+                        const line = lines[i].trim();
+
+                        // Sayısal veriyi ayıkla
+                        const numericData = extractNumericData(line);
+
+                        if (numericData) {
+                            lastUpdateTime = Date.now(); // Son güncelleme zamanını güncelle
+                            checkStabilityAndDisplay(numericData); // Stabilite kontrolü ve ekran yazdırma
+                            displayWeight(numericData); // Sayısal veriyi ekranda göster
+                        } else {
+                            console.log(`No numeric data found in: ${line}`);
+                            displayRawData(line); // Sayısal olmayan veriyi de göster
+                        }
+                    }
+
+                    // Son kalan parçayı buffer'da tut
+                    buffer = lines[lines.length - 1];
+                }
+            }
+        }
+    } catch (error) {
+        statusDisplay.textContent = `Read error: ${error.message}`;
+        weightDisplay.textContent = 'Disconnected';
+        weightDisplay.style.color = 'red';
+    } finally {
+        reader.releaseLock();
+    }
+}*/
+
+// Timeout kontrol fonksiyonu
+/*unction monitorTimeout() {
+    setInterval(() => {
+        if (Date.now() - lastUpdateTime > timeoutDuration) {
+            weightDisplay.textContent = 'Connection lost';
+            weightDisplay.style.color = 'red';
+            previousWeight = null; // Önceki ağırlığı sıfırla
+            statusDisplay.textContent = 'No data received. Connection lost.';
+            statusDisplay.style.color = 'red';
+        }
+    }, 1000); // Her saniyede bir kontrol et
+}*/
+
+function checkStabilityAndDisplay(currentWeight) {
+    const parsedWeight = parseFloat(currentWeight);
+    //const product = getProductRange();
+
+    if (parsedWeight === previousWeight) {
+        if (!stableStartTime) {
+            stableStartTime = Date.now();
+        } else if (Date.now() - stableStartTime >= stableDuration) {
+            if (!displayingWeight) { //&& parsedWeight >= product.urun_min && parsedWeight <= product.urun_max) {
+                if (lastPrintedWeight === null || Math.abs(parsedWeight - lastPrintedWeight) >= 0.01) {
+                  if (parsedWeight > 0) {
+                    displayingWeight = true;
+
+                    weightDisplay.textContent = `YAZDIR` // ${parsedWeight.toFixed(1)} kg`;
+                    weightDisplay.style.color = 'green';
+
+                    // Yazdırma fonksiyonunu çağır
+                    
+                    sendToPrinterWithWeight(parsedWeight);//.toFixed(2));
+                    lastPrintedWeight = parsedWeight;
+                    console.log(lastPrintedWeight);
+                    setTimeout(() => {
+                        displayingWeight = false;
+                    }, displayDuration);
+                  }
+                }
+            }
+        }
+    } else {
+        stableStartTime = null;
+        weightDisplay.style.color = 'red';
+    }
+
+    lastUpdateTime = Date.now();
+    previousWeight = parsedWeight;
+}
+// Ağırlığı ekranda göster
+/*function displayWeight(weight) {
+    const parsedWeight = parseFloat(weight);
+    const decimalPlaces = weight.includes('.') ? weight.split('.')[1].length : 0;
+    weightDisplay.textContent = `${parsedWeight.toFixed(decimalPlaces)} kg`;
+}*/
+function displayWeight(weight) {
+    // weight'i stringe dönüştür
+    const weightString = weight.toString();
+
+    // Ondalık basamakları kontrol et
+    const decimalPlaces = weightString.includes('.') ? weightString.split('.')[1].length : 0;
+
+    // Ağırlığı ekrana yazdır
+    weightDisplay.textContent = `${parseFloat(weight).toFixed(decimalPlaces)} kg`;
+    weightDisplay.style.color = 'green';
+}
+
+// Ham veriyi ekranda göster (sayısal değilse)
+function displayRawData(data) {
+    weightDisplay.textContent = `Raw: ${data}`;
+    weightDisplay.style.color = 'red'; // Ham veri geldiğinde kırmızı renk
+}
+
+// Veriden sayısal bilgiyi ayıkla
+/*function extractNumericData(data) {
+    let numericData = "";
+    let decimalPointSeen = false; // Ondalık nokta kontrolü
+
+    for (let i = 0; i < data.length; i++) {
+        if (!isNaN(data[i]) && data[i] !== ' ') {
+            numericData += data[i];
+        } else if (data[i] === '.' && !decimalPointSeen) {
+            numericData += data[i];
+            decimalPointSeen = true;
+        } else if (data[i] === '-' && numericData.length === 0) {
+            numericData += data[i];
+        }
+    }
+
+    return numericData;
+}*/
+
+function extractNumericData(data) {
+    // Veri içinden sayısal kısmı ayıkla (ör. 0.000, 12.100)
+    const match = data.match(/[-+]?\d+\.\d+/); // Ondalık sayı formatını eşleştir
+    return match ? match[0] : null; // Sayısal veri bulunursa döndür, aksi halde null
+}
+
+
+document.getElementById('print-button').addEventListener('click', async () => {
+    sendToPrinterWithWeight(lastPrintedWeight.toString());
+});
+
+async function sendToPrinterWithWeight(weight) {
+    try {
+        const response = await fetch('/sales/print/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': '{{ csrf_token }}', // CSRF token
+            },
+            body: JSON.stringify({ weight }), // JSON formatında kilo bilgisi gönder
+        });
+
+        const data = await response.json();
+        if (response.ok) {
+            console.log('Başarılı:', data.message);
+        } else {
+            console.error('Hata:', data.message);
+        }
+    } catch (error) {
+        console.error('Yazdırma sırasında bir hata oluştu:', error);
+    }
+}
+</script>
+{% endblock javascripts %}

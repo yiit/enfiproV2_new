@@ -1,0 +1,1 @@
+/home/pi/enfiproV2/pgsql14/bin/postgres "-D" "/home/pi/enfiproV2/pgsql14_data"

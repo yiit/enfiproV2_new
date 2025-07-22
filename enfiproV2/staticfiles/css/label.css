@@ -1,0 +1,18 @@
+/* Örnek CSS Dosyası: label.css */
+.urun_label {
+    font-size: 1px;
+    font-weight: bold;
+    color: #000dff;
+    margin-bottom: 1px;
+    display: block;
+}
+
+.form-group {
+    margin-top: 1px;
+}
+
+input.form-control {
+    border: 1px solid #6c757d;
+    border-radius: 1px;
+    padding: 1px;
+}

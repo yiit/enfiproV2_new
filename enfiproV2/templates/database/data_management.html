@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veri Yönetimi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1, h2 {
+            color: #444;
+        }
+        form {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        button {
+            background: #007BFF;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Veri Yönetimi</h1>
+
+        <!-- Veriyi Dışa Aktar -->
+        <h2>Veriyi Dışa Aktar</h2>
+        <form method="get" action="{% url 'database:export_data' %}">
+            <label for="model_selector">Tablo Seçimi:</label>
+            <select id="model_selector" name="model_name" required>
+                <option value="" disabled selected>Tablo Seçiniz</option>
+            </select>
+
+            <button type="submit">Veriyi Dışa Aktar</button>
+        </form>
+
+        <!-- Veriyi İçe Aktar -->
+        <h2>Veriyi İçe Aktar</h2>
+<form method="post" enctype="multipart/form-data" action="{% url 'database:import_data' %}">
+    {% csrf_token %}
+    <input type="file" name="json_file" accept=".json" required>
+    <button type="submit">Yükle ve Aktar</button>
+</form>
+
+
+        <!-- Veriyi Uzak Sisteme Gönder -->
+<!-- Veriyi Uzak Sisteme Gönder -->
+<h2>Uzak Sistem İçin Veri Güncelle</h2>
+<form id="remoteForm" enctype="multipart/form-data" method="post">
+    <label for="remote_ip">Uzak Sistem IP Adresi:</label>
+    <input type="text" id="remote_ip" name="remote_ip" placeholder="http://192.168.0.36:8001" required>
+
+    <label for="json_file">JSON Dosyasını Yükle:</label>
+    <input type="file" id="json_file" name="json_file" accept=".json" required>
+
+    <button type="submit">Veri Gönder</button>
+</form>
+    </div>
+
+    <script>
+    document.getElementById('remoteForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const remoteIp = document.getElementById('remote_ip').value.trim();
+        const jsonFileInput = document.getElementById('json_file').files[0];
+
+        if (!remoteIp || !jsonFileInput) {
+            alert('Lütfen tüm alanları doldurun.');
+            return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = function() {
+            try {
+                const jsonData = JSON.parse(reader.result);
+                console.log('Yüklenen JSON İçeriği:', jsonData);
+            } catch (e) {
+                alert('Geçersiz JSON dosyası. Lütfen doğru formatta yükleyin.');
+                return;
+            }
+        };
+        reader.readAsText(jsonFileInput);
+
+        const formData = new FormData();
+        formData.append('remote_ip', remoteIp);
+        formData.append('json_file', jsonFileInput);
+
+        fetch('/database/update-remote/', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (!response.ok) {
+                return response.json().then(data => {
+                    throw new Error(data.error || `Hata kodu: ${response.status}`);
+                });
+            }
+            return response.json();
+        })
+        .then(data => {
+            alert('Veri başarıyla gönderildi: ' + JSON.stringify(data));
+        })
+        .catch(error => {
+            console.error('Hata:', error);
+            alert('Beklenmedik bir hata oluştu: ' + error.message);
+        });
+    });
+
+document.addEventListener('DOMContentLoaded', function () {
+    fetch('/database/get-models/')
+        .then(response => response.json())
+        .then(data => {
+            const modelSelector = document.getElementById('model_selector');
+            data.forEach(model => {
+                const option = document.createElement('option');
+                option.value = `${model.app_label}.${model.model_name}`;
+                option.textContent = `${model.verbose_name} (${model.app_label})`;
+                modelSelector.appendChild(option);
+            });
+        })
+        .catch(error => {
+            console.error('Modeller yüklenirken hata oluştu:', error);
+            alert('Modeller yüklenemedi. Lütfen sayfayı yenileyin.');
+        });
+});
+
+    </script>
+</body>
+</html>

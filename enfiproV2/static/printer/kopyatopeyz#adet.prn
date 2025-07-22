@@ -1,0 +1,21 @@
+
+SIZE 58 mm, 40 mm
+GAP 1 mm, 0 mm
+SET RIBBON OFF
+DIRECTION 0,0
+REFERENCE 0,0
+OFFSET 2 mm
+SET PEEL OFF
+SET CUTTER OFF
+SET TEAR ON
+SPEED 3
+DENSITY 3
+CLS
+CODEPAGE UTF-8
+TEXT 440,300,"0",180,8,8,"%urun_ismi1%"
+TEXT 440,260,"0",180,8,8,"%tarih% - %saat%"
+TEXT 440,220,"0",180,8,8,"NET : %net%"
+TEXT 440,180,"0",180,8,8,"ADET : %adet_hesap%"
+TEXT 440,140,"0",180,8,8,"ADET GRAMAJ: %adet_gramaj%"
+BARCODE 400,110,"EAN13",60,1,180,2,4,"%EAN13barkod%%adet_hesap_barkod%"
+PRINT 1,1

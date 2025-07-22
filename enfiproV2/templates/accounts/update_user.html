@@ -1,0 +1,48 @@
+{% extends "pos/base.html" %}
+
+{% block title %}Kullanıcı Güncelle{% endblock %}
+{% block heading %}Kullanıcı Güncelle{% endblock %}
+
+{% block content %}
+
+<!-- Geri Git Butonu -->
+<div class="row ml-0 mb-3">
+    <a href="{% url 'authentication:user_list' %}">
+        <button type="button" class="btn btn-info font-weight-bold">
+            <i class="fas fa-long-arrow-alt-left mr-2"></i> Geri
+        </button>
+    </a>
+</div>
+
+<!-- Ana Kart -->
+<div class="card shadow mb-4 col-md-8">
+
+    <div class="card-body">
+        <form method="post" action="{% url 'authentication:update_user' user.id %}">
+            {% csrf_token %}
+
+            {% for field in form %}
+                <div class="form-group">
+                    <label for="{{ field.id_for_label }}" class="font-weight-bold text-dark">{{ field.label }}</label>
+                    {{ field }}
+                    {% if field.name == "password1" %}
+                        <small class="form-text text-muted">Yeni şifre girmek istemiyorsan bu alanı boş bırakabilirsin.</small>
+                    {% endif %}
+                    {% if field.errors %}
+                        <div class="text-danger mt-1">
+                            {{ field.errors.0 }}
+                        </div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+
+            <div class="text-right">
+                <button type="submit" class="btn btn-success font-weight-bold">
+                    <i class="fas fa-save mr-1"></i> Güncelle
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

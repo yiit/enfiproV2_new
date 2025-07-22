@@ -1,0 +1,134 @@
+{% load static %}
+
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+    <!-- Sidebar - Brand -->
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{% url 'pos:index' %}">
+        <div class="sidebar-brand-icon rotate-n-15">
+            <i class="fas fa-laugh-wink"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">endutek</div>
+    </a>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider  mb-0">
+
+
+    {% if request.user.is_superuser %}
+
+    	<!-- Nav Item - Network Settings -->
+<li class="nav-item">
+    <a class="nav-link" href="http://localhost:80" target="_blank">
+        <i class="fas fa-network-wired mr-1"></i>
+        <i class="fas fa-wifi mr-2"></i>
+        <span>Network Ayarları</span>
+    </a>
+</li>
+    
+    <!-- Sadece Yönetici Kullanıcılar için Görünen Menü Öğeleri -->
+
+    <!-- Nav Item - Dashboard -->
+    <!--<li class="{% if "dashboard" in active_icon %} nav-item active {% else %} nav-item {% endif %}">
+        <a class="nav-link" href="{% url 'pos:index' %}">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Dashboard</span></a>
+    </li>-->
+
+    <!-- Nav Item - Kullanıcılar -->
+    <li class="{% if 'users' in active_icon %} nav-item active bg-success text-white {% else %} nav-item {% endif %}">
+        <a class="nav-link" href="{% url 'authentication:user_list' %}">
+            <i class="fas fa-fw fa-user"></i>
+            <span>Kullanıcılar</span>
+        </a>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+
+    <!-- Nav Item - Products Collapse Menu -->
+    <li class="{% if "products" in active_icon %} nav-item active bg-success text-white {% else %} nav-item {% endif %}">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+            aria-expanded="true" aria-controls="collapseTwo">
+            <i class="fas fa-fw fa-tag"></i>
+            <span>Ürünler</span>
+        </a>
+        <div id="collapseTwo" class="{% if "products" in active_icon %} collapse show {% else %} collapse {% endif %}" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="{% if "categories" in active_icon %} collapse-item active {% else %} collapse-item {% endif %}" href="{% url 'products:categories_list' %}">Kategoriler</a>
+                <a class="{% if "products_products" in active_icon %} collapse-item active {% else %} collapse-item {% endif %}" href="{% url 'products:products_list' %}">Ürünler</a>
+            </div>
+        </div>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+
+    <!-- Nav Item - Customers -->
+    <li class="{% if "customers" in active_icon %} nav-item active bg-success text-white {% else %} nav-item {% endif %}">
+        <a class="nav-link" href="{% url 'customers:customers_list' %}">
+            <i class="fas fa-fw fa-users"></i>
+            <span>Müşteri</span></a>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+
+<!-- Database Yönetimi -->
+<li class="nav-item">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDatabase"
+        aria-expanded="true" aria-controls="collapseDatabase">
+        <i class="fas fa-database"></i>
+        <span>Database</span>
+    </a>
+    <div id="collapseDatabase" class="collapse" aria-labelledby="headingDatabase" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="{% url 'database:data_management' %}">Veri Yönetimi</a>
+            <a class="collapse-item" href="{% url 'database:data_management' %}#export">Veri Dışa Aktar</a>
+            <a class="collapse-item" href="{% url 'database:data_management' %}#remote">Uzak Sistemi Güncelle</a>
+        </div>
+    </div>
+</li>
+
+    
+        <hr class="sidebar-divider my-0">
+
+        <li class="{% if 'logs' in active_icon %} nav-item active bg-success text-white {% else %} nav-item {% endif %}">
+            <a class="nav-link" href="{% url 'sales:print_log_report' %}">
+                <i class="fas fa-file-alt"></i>
+                <span>Log Raporu</span>
+            </a>
+        </li>
+        
+
+    {% endif %}
+
+    <!-- Nav Item - Sales -->
+    <li class="{% if "sales" in active_icon %} nav-item active bg-success text-white {% else %} nav-item {% endif %}">
+        <a class="nav-link" href="{% url 'sales:sales_add' %}">
+            <!-- <i class="fas fa-fw fa-cart-plus"></i> -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="mr-2">
+                <!-- Kağıt şekli -->
+                <path d="M3 3H17C17.55 3 18 3.45 18 4V20C18 20.55 17.55 21 17 21H3C2.45 21 2 20.55 2 20V4C2 3.45 2.45 3 3 3Z" fill="#E0E0E0" stroke="#A0A0A0" stroke-width="0.5"/>
+              
+                <!-- Kenarı kıvrılmış efekt -->
+                <path d="M17 3V8C17 8.55 17.45 9 18 9H20C19 8 17 6 17 3Z" fill="#C0C0C0" />
+              
+                <!-- Yazı çizgileri -->
+                <line x1="4" y1="6" x2="15" y2="6" stroke="#707070" stroke-width="1" />
+                <line x1="4" y1="9" x2="15" y2="9" stroke="#707070" stroke-width="1" />
+                <line x1="4" y1="12" x2="15" y2="12" stroke="#707070" stroke-width="1" />
+                <line x1="4" y1="15" x2="15" y2="15" stroke="#707070" stroke-width="1" />
+              </svg>
+            <span>Etiketleme</span></a>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider d-none d-md-block">
+
+    <!-- Sidebar Toggler (Sidebar) -->
+    <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+    </div>
+
+
+</ul>

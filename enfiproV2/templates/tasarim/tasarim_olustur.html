@@ -1,0 +1,55 @@
+<!-- tasarim/tasarim_olustur.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiket Tasarımı Oluştur</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <style>
+        #tasarim-alani {
+            width: 500px;
+            height: 300px;
+            border: 2px dashed #ccc;
+            padding: 10px;
+        }
+        .draggable {
+            width: 100px;
+            height: 50px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            cursor: move;
+        }
+    </style>
+</head>
+<body>
+    <h1>Etiket Tasarımı Oluştur</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div id="tasarim-alani">
+            <div class="draggable" id="barkod">Barkod</div>
+            <div class="draggable" id="qrcode">QR Kod</div>
+        </div>
+        <button type="submit">Kaydet</button>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $(function() {
+            $(".draggable").draggable({
+                containment: "#tasarim-alani",
+                stop: function(event, ui) {
+                    var offset = ui.offset;
+                    var id = $(this).attr('id');
+                    var tasarim = "{{ form.tasarim.value }}";
+                    tasarim += id + ":" + offset.left + "," + offset.top + ";";
+                    $("#id_tasarim").val(tasarim);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

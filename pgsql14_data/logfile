@@ -1,0 +1,93 @@
+2025-05-08 12:25:57.184 +03 [3177] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:25:57.184 +03 [3177] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:26:02.434 +03 [3198] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:26:02.434 +03 [3198] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:26:03.007 +03 [3204] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:26:03.007 +03 [3204] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:26:08.233 +03 [3208] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:26:08.233 +03 [3208] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:26:13.482 +03 [3212] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:26:13.482 +03 [3212] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:26:18.720 +03 [3218] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:26:18.720 +03 [3218] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:26:23.965 +03 [3224] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:26:23.965 +03 [3224] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:26:29.205 +03 [3228] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:26:29.205 +03 [3228] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:26:34.465 +03 [3267] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:26:34.465 +03 [3267] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:26:39.724 +03 [3271] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:26:39.724 +03 [3271] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:26:44.999 +03 [3292] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:26:44.999 +03 [3292] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:26:50.828 +03 [3313] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:26:50.828 +03 [3313] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:26:55.513 +03 [3320] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:26:55.513 +03 [3320] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:27:00.722 +03 [3324] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:27:00.722 +03 [3324] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:27:05.972 +03 [3328] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:27:05.972 +03 [3328] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:27:11.220 +03 [3332] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:27:11.220 +03 [3332] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:27:16.470 +03 [3337] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:27:16.470 +03 [3337] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:27:21.734 +03 [3343] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:27:21.734 +03 [3343] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:27:26.982 +03 [3347] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:27:26.982 +03 [3347] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:27:32.222 +03 [3351] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:27:32.222 +03 [3351] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:27:37.465 +03 [3355] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:27:37.465 +03 [3355] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:27:42.735 +03 [3360] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:27:42.735 +03 [3360] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:27:47.983 +03 [3364] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:27:47.983 +03 [3364] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:27:53.229 +03 [3368] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:27:53.229 +03 [3368] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:27:58.468 +03 [3372] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:27:58.468 +03 [3372] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:28:03.690 +03 [3376] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:28:03.690 +03 [3376] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:28:08.979 +03 [3380] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:28:08.979 +03 [3380] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:28:14.232 +03 [3384] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:28:14.232 +03 [3384] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:28:19.472 +03 [3388] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:28:19.472 +03 [3388] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:28:24.714 +03 [3392] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:28:24.714 +03 [3392] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:28:29.975 +03 [3396] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:28:29.975 +03 [3396] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:28:35.234 +03 [3400] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:28:35.234 +03 [3400] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:28:40.484 +03 [3404] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:28:40.484 +03 [3404] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:28:45.723 +03 [3408] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:28:45.723 +03 [3408] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:28:50.966 +03 [3412] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:28:50.966 +03 [3412] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:28:56.233 +03 [3416] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:28:56.233 +03 [3416] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:29:01.439 +03 [3420] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:29:01.439 +03 [3420] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:29:06.727 +03 [3424] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:29:06.727 +03 [3424] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:29:11.979 +03 [3428] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:29:11.979 +03 [3428] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:29:17.218 +03 [3432] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:29:17.218 +03 [3432] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:29:22.472 +03 [3437] FATAL:  data directory "/home/pi/enfiproV2/pgsql14_data" has invalid permissions
+2025-05-08 12:29:22.472 +03 [3437] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2025-05-08 12:29:27.695 +03 [3446] LOG:  starting PostgreSQL 14.11 on x86_64-pc-linux-gnux32, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 32-bit
+2025-05-08 12:29:27.696 +03 [3446] LOG:  listening on IPv6 address "::1", port 5432
+2025-05-08 12:29:27.696 +03 [3446] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-05-08 12:29:27.718 +03 [3446] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-05-08 12:29:27.744 +03 [3447] LOG:  database system was shut down at 2025-05-08 12:04:33 +03
+2025-05-08 12:29:27.759 +03 [3446] LOG:  database system is ready to accept connections
+2025-05-08 12:34:16.652 +03 [3446] LOG:  received fast shutdown request
+2025-05-08 12:34:16.664 +03 [3446] LOG:  aborting any active transactions
+2025-05-08 12:34:16.665 +03 [3446] LOG:  background worker "logical replication launcher" (PID 3453) exited with exit code 1
+2025-05-08 12:34:16.665 +03 [3448] LOG:  shutting down
+2025-05-08 12:34:16.829 +03 [3446] LOG:  database system is shut down

@@ -1,0 +1,122 @@
+{% extends "pos/base.html" %}
+{% load static %}
+
+{% block title %}Yeni Kullanıcı{% endblock title %}
+{% block heading %}Yeni Kullanıcı Ekle{% endblock heading %}
+
+{% block content %}
+
+{% if messages %}
+  <div class="container mt-2">
+    {% for message in messages %}
+      <div class="alert alert-{{ message.tags }} alert-dismissible fade show shadow-sm" role="alert">
+        <i class="fas fa-info-circle mr-2"></i> {{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Kapat">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+
+
+<!-- Geri Git Butonu -->
+<div class="row ml-0 mb-3">
+    <a href="{% url 'authentication:user_list' %}">
+        <button type="button" class="btn btn-info font-weight-bold">
+            <i class="fas fa-long-arrow-alt-left mr-2"></i> Geri
+        </button>
+    </a>
+</div>
+
+<!-- Card içinde form -->
+<div class="card shadow mb-4 col-md-8">
+    <div class="card-body">
+        <form action="{% url 'authentication:add_user' %}" method="post">
+            {% csrf_token %}
+            
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="first_name">Ad</label>
+                    <input type="text" class="form-control" name="first_name" id="first_name" placeholder="Adınızı girin" autocomplete="given-name">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="last_name">Soyad</label>
+                    <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Soyadınızı girin" autocomplete="family-name">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Email girin" autocomplete="email">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="phone">Telefon No</label>
+                    <input type="tel" name="phone_number" id="phone_number" class="form-control" placeholder="Telefon numarası" autocomplete="tel">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="username">Kullanıcı Adı</label>
+                    <input type="text" name="username" id="username" class="form-control" placeholder="Kullanıcı adı" required autocomplete="username">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="password">Şifre</label>
+                    <input type="password" name="password1" id="password1" class="form-control" placeholder="Şifre" required autocomplete="new-password">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="password2">Şifre Tekrarı</label>
+                    <input type="password" name="password2" id="password2" class="form-control" placeholder="Şifreyi tekrar girin" required autocomplete="new-password">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="role" class="m-0 font-weight-bold text-primary">Rol</label>
+                <select name="role" id="role" class="form-control" required>
+                    <option value="user">Standart Kullanıcı</option>
+                    <option value="admin">Yönetici</option>
+                </select>
+            </div>
+
+            {% if form.errors %}
+<div class="alert alert-danger">
+    <ul>
+        {% for field in form %}
+            {% for error in field.errors %}
+                <li><strong>{{ field.label }}:</strong> {{ error }}</li>
+            {% endfor %}
+        {% endfor %}
+        {% for error in form.non_field_errors %}
+            <li>{{ error }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+            
+            <button type="submit" class="btn btn-success font-weight-bold">Kullanıcı Oluştur</button>
+        </form>
+    </div>
+</div>
+{% endblock content %}
+
+{% block javascripts %}
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const password1 = document.querySelector("input[name='password1']");
+        const password2 = document.querySelector("input[name='password2']");
+        
+        password2.addEventListener("input", function() {
+            if (password1.value !== password2.value) {
+                password2.setCustomValidity("Şifreler eşleşmiyor!");
+            } else {
+                password2.setCustomValidity("");
+            }
+        });
+    });
+</script>
+{% endblock javascripts %}

@@ -1,0 +1,151 @@
+{% extends "pos/base.html" %}
+{% load static %}
+
+<!-- Sayfa Başlığı -->
+{% block title %}Kullanıcı Listesi{% endblock title %}
+
+<!-- Ekstra CSS -->
+{% block stylesheets %}
+<!-- DataTables -->
+<link href="{% static 'vendor/datatables/dataTables.bootstrap4.min.css' %}" rel="stylesheet">
+<link href="{% static 'css/pagination_buttons.css' %}" rel="stylesheet">
+{% endblock stylesheets %}
+
+<!-- Sayfa Başlığı -->
+{% block heading %}Kullanıcılar{% endblock heading %}
+
+<!-- İçerik -->
+{% block content %}
+
+<!-- Yeni Kullanıcı Ekle Butonu -->
+<div class="row ml-0 mb-3">
+    <a href="{% url 'authentication:add_user' %}">
+        <button type="button" class="btn btn-success font-weight-bold">
+            <i class="fas fa-user-plus mr-2"></i> Yeni Kullanıcı Ekle
+        </button>
+    </a>
+</div>
+
+<!-- DataTable -->
+<div class="card shadow mb-12">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Kullanıcı Listesi</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Kullanıcı Adı</th>
+                        <th>Email</th>
+                        <th>Telefon</th>
+                        <th>Rol</th>
+                        <th class="text-center" style="width:5%">Düzenle</th>
+                        <th class="text-center" style="width:5%">Sil</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in users %}
+                    <tr>
+                        <td>{{ user.id }}</td>
+                        <td>{{ user.username }}</td>
+                        <td>{{ user.email }}</td>
+                        <td>{{ user.phone_number }}</td>
+                        <td class="text-center">
+                            {% if user.is_superuser %}
+                                <span class="badge badge-danger">Yönetici</span>
+                            {% elif user.is_staff %}
+                                <span class="badge badge-warning">Personel</span>
+                            {% else %}
+                                <span class="badge badge-secondary">Kullanıcı</span>
+                            {% endif %}
+                        </td>
+                        <td class="text-center">
+                            <!-- Kullanıcı Düzenle Butonu -->
+                            <a href="{% url 'authentication:update_user' user.id %}" class="btn btn-warning btn-sm">
+                                <i class="fas fa-pen"></i>
+                            </a>
+                        </td>
+                        <td class="text-center">
+                            <!-- Kullanıcı Silme Butonu (Modal Açılır) -->
+                            <button rel="delete" type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteModal" data-id="{{ user.id }}" data-username="{{ user.username }}">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Silme Onayı Modal Penceresi -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Kullanıcı Sil</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div id="deleteModalBody" class="modal-body">
+                Kullanıcıyı silmek istediğinizden emin misiniz?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Vazgeç</button>
+                <a id="deleteUserURL" href="#" class="btn btn-danger">Evet, Sil</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+
+<!-- Ekstra JS -->
+{% block javascripts %}
+<!-- DataTables -->
+<script src="{% static 'vendor/datatables/jquery.dataTables.min.js' %}"></script>
+<script src="{% static 'vendor/datatables/dataTables.bootstrap4.min.js' %}"></script>
+
+<script>
+    $(document).ready(function() {
+        $('#dataTable').DataTable({
+            dom: 'Bfrtip',
+            buttons: [
+                {
+                    extend: 'print',
+                    text: 'Yazdır <i class="fas fa-print ml-2"></i>',
+                    className: 'btn btn-info'
+                },
+                {
+                    extend: 'excelHtml5',
+                    text: 'Excel <i class="fas fa-file-excel ml-2"></i>',
+                    className: 'btn btn-success'
+                },
+                {
+                    extend: 'pdfHtml5',
+                    text: 'PDF <i class="fas fa-file-pdf ml-2"></i>',
+                    className: 'btn btn-danger'
+                }
+            ],
+            columnDefs: [
+                { targets: [0], visible: false, searchable: false },
+                { targets: [-1], orderable: false }
+            ]
+        });
+
+        // Kullanıcı Silme Modal İçeriğini Güncelle
+        $('#deleteModal').on('show.bs.modal', function(event) {
+            var button = $(event.relatedTarget);
+            var userId = button.data('id');
+            var username = button.data('username');
+            var deleteURL = "/accounts/delete_user/" + userId + "/";
+            $('#deleteModalBody').text(username + " adlı kullanıcıyı silmek istediğinize emin misiniz?");
+            $('#deleteUserURL').attr('href', deleteURL);
+        });
+    });
+</script>
+{% endblock javascripts %}

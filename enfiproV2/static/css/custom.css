@@ -1,0 +1,131 @@
+/* 🎨 Genel stil (body dahil) */
+body, table, th, td, input, select, textarea {
+  font-family: "Segoe UI", "Roboto", "Open Sans", Arial, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  color: #333 !important;
+}
+
+/* 📋 Tablo başlıkları (th) */
+th {
+  font-weight: 600 !important;                /* yarı kalın */
+  color: #222 !important;
+  background-color: #f8f9fc !important;       /* açık gri zemin */
+  border-bottom: 2px solid #dee2e6 !important;
+  font-size: 17px !important;                 /* başlıklar daha büyük */
+  padding: 12px 14px !important;
+  text-align: center;
+}
+
+/* 📌 Tablo hücreleri (td) */
+#dataTable td {
+  padding: 12px 14px !important;
+  border-color: #dee2e6 !important;
+}
+
+/* 📧 Email sütunu (3. sütun) */
+#dataTable tbody tr td:nth-child(3) {
+  color: #0056b3 !important;                  /* mavi ton */
+  font-weight: 600 !important;                /* daha belirgin */
+  font-size: 16px !important;
+}
+
+/* ✨ Tablo hover efekti */
+#dataTable tbody tr:hover {
+  background-color: #0056b3 !important;
+  transition: background-color 0.2s ease;
+color: #fff !important;
+}
+#dataTable tbody tr:hover td {
+  color: #fff !important;
+}
+
+/* 🖊️ Tüm input/select/textarea ortak stil */
+input,
+select,
+textarea {
+  background-color: #fff !important;
+  border: 1px solid #ccc !important;
+  border-radius: 4px !important;
+  padding: 8px 12px !important;
+  transition: all 0.2s ease;
+}
+
+/* 🖱️ Hover efekti (input/select/textarea) */
+input:hover,
+select:hover,
+textarea:hover {
+  color: #0056b3 !important;                  /* yazı mavi */
+  border-color: #80bdff !important;           /* kenarlık mavi */
+  box-shadow: 0 0 4px rgba(0, 86, 179, 0.3) !important;
+}
+
+/* ✏️ Focus efekti (input/select/textarea) */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none !important;
+  border-color: #007bff !important;           /* daha güçlü mavi */
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.4) !important;
+}
+
+/* 🎚️ Slider (range) özel görünüm */
+input[type="range"] {
+  padding: 0 !important;
+  height: 6px;
+  background: #ddd;
+  border: none;
+  border-radius: 3px;
+}
+input[type="range"]:hover {
+  background: #cce4ff;
+}
+input[type="range"]:focus {
+  background: #99ccff;
+}
+
+
+/* Tablo sütun genişliğini içeriğe göre ayarla */
+#dataTable {
+  table-layout: auto !important;
+  width: auto !important;
+  white-space: nowrap !important;
+}
+
+/* Hücre padding ve görünüm */
+#dataTable th, #dataTable td {
+  padding: 8px 12px !important;
+  word-break: keep-all !important;
+}
+
+/* Ortak büyütme stili + mavi renk + bold */
+.big-input,
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  font-size: 22px !important;
+  padding: 14px 16px !important;
+  transform: scaleY(1.5) !important;
+  transform-origin: bottom !important;
+  z-index: 10 !important;
+  position: relative !important;
+  transition: all 0.2s ease !important;
+
+  /* 👇 Eklenen özellikler */
+  color: #0056b3 !important;      /* mavi yazı */
+  font-weight: 700 !important;    /* bold */
+}
+
+
+/* İstersen hover’a da ekleyebilirsin */
+input[type="text"]:hover,
+input[type="number"]:hover,
+input[type="email"]:hover,
+textarea:hover {
+  /* sadece hover’da hafif büyüt istersen */
+  transform: scaleY(1.1);
+  transform-origin: bottom;
+  transition: all 0.2s ease;
+}
+

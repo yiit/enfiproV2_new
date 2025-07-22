@@ -1,0 +1,17 @@
+<h2>Yazdırma Kayıtları</h2>
+<table border="1">
+    <tr>
+        <th>Tarih</th>
+        <th>Müşteri</th>
+        <th>Ürün</th>
+        <th>Ağırlık</th>
+    </tr>
+    {% for log in logs %}
+    <tr>
+        <td>{{ log.timestamp|date:"d-m-Y H:i" }}</td>
+        <td>{{ log.customer_name1 }}</td>
+        <td>{{ log.product_name }}</td>
+        <td>{{ log.weight }}</td>
+    </tr>
+    {% endfor %}
+</table>
