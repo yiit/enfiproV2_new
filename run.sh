@@ -11,6 +11,90 @@ read -p "Devam etmek için ENTER'a basın..."
 #########################################
 echo "📦 Linux sistem güncelleniyor ve temel paketler kuruluyor..."
 sudo apt update
+sudo apt install -y python3-evdev beep
+
+TOUCH_NAME="ILITEK ILITEK-TP"
+SERVICE_NAME="touch-beep"
+BEEP_FREQ=500
+BEEP_LEN=120
+
+
+echo "==> pcspkr modülü etkinleştiriliyor …"
+if ! lsmod | grep -q pcspkr; then
+  sudo modprobe pcspkr
+fi
+echo "pcspkr" | sudo tee /etc/modules-load.d/pcspkr.conf >/dev/null
+
+echo "==> /usr/bin/beep için yetenek veriliyor …"
+sudo setcap 'cap_sys_tty_config+ep' /usr/bin/beep
+
+echo "==> Dokunmatik event dosyası aranıyor …"
+EVENT_PATH=$(grep -E -A5 "$TOUCH_NAME" /proc/bus/input/devices \
+           | grep -Eo 'event[0-9]+' | head -n1 | xargs -I{} echo /dev/input/{})
+if [ -z "$EVENT_PATH" ]; then
+  echo "Aygıt bulunamadı! TOUCH_NAME doğru mu? Elle EVENT_PATH girip tekrar deneyin." >&2
+  exit 1
+fi
+echo "  Bulundu: $EVENT_PATH"
+
+echo "==> Python dinleyici oluşturuluyor …"
+/usr/bin/sudo tee /usr/local/bin/touch_beep.py >/dev/null <<PY
+#!/usr/bin/env python3
+import subprocess
+from evdev import InputDevice, list_devices, ecodes
+
+# 🔍 Sadece "ILITEK ILITEK-TP Mouse" adını arıyoruz
+TARGET_NAME = "ilitek ilitek-tp"
+
+def find_ilitek_mouse():
+    for path in list_devices():
+        dev = InputDevice(path)
+        if dev.name.lower() == TARGET_NAME:
+            print(f"[INFO] Seçilen cihaz: {dev.name} ({path})")
+            return path
+    raise RuntimeError("❌ 'ILITEK ILITEK-TP' bulunamadı!")
+
+# Cihazı bul
+DEV_PATH = find_ilitek_mouse()
+dev = InputDevice(DEV_PATH)
+print(f"[INFO] Dinleniyor → {dev.path} ({dev.name})")
+
+# 🔊 Dokunma olayını dinle
+for ev in dev.read_loop():
+    if ev.type == ecodes.EV_KEY and ev.code == ecodes.BTN_TOUCH and ev.value == 1:
+        subprocess.Popen(["beep", "-f", "500", "-l", "120"],
+                         stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    elif ev.type == ecodes.EV_ABS and ev.code == ecodes.ABS_MT_TRACKING_ID and ev.value != -1:
+        subprocess.Popen(["beep", "-f", "500", "-l", "120"],
+                         stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
+PY
+
+sudo chmod +x /usr/local/bin/touch_beep.py
+
+echo "==> Systemd servisi yazılıyor …"
+/usr/bin/sudo tee /etc/systemd/system/${SERVICE_NAME}.service >/dev/null <<EOF
+[Unit]
+Description=Beep on ILITEK touchscreen touch
+After=multi-user.target
+
+[Service]
+ExecStart=/usr/bin/python3 /usr/local/bin/touch_beep.py
+WorkingDirectory=/usr/local/bin
+User=pi
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+echo "==> Servis etkinleştiriliyor …"
+sudo systemctl daemon-reload
+sudo systemctl enable --now ${SERVICE_NAME}.service
+
+echo "Kurulum tamamlandı! Ekrana dokunduğunuzda ${BEEP_FREQ} Hz, ${BEEP_LEN} ms bip duymalısınız."
+read -p"Devam etmek için ENTER'a basın..."
+
 sudo apt full-upgrade -y
 sudo apt install -y wget git build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev \
   libsqlite3-dev curl libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev \
@@ -242,6 +326,94 @@ sudo chown pi:pi /home/pi/.config/lxsession/LXDE-pi/autostart
 read -p "👉 Devam etmek için ENTER'a basın..."
 
 sudo apt autoremove
+
+#########################################
+# 18. RASPAP KURULUMU (Kernel değiştirmez)
+#########################################
+echo "📡 RaspAP kurulumu başlatılıyor (kernel değişmeyecek)..."
+
+# Gerekli bağımlılıkları yükle
+sudo apt update
+sudo apt install -y git lighttpd php7.4-cgi php7.4-cli php7.4-common php7.4-json php7.4-readline hostapd dnsmasq iptables-persistent
+
+# RaspAP deposunu klonla
+cd /home/pi
+git clone https://github.com/RaspAP/raspap-webgui.git
+cd raspap-webgui
+
+# quick installer’ı çalıştır (kernel değiştirmez)
+sudo bash quick-install.sh --yes
+
+# RaspAP servislerini aktif et
+sudo systemctl enable lighttpd
+sudo systemctl restart lighttpd
+
+# Not: quick-install.sh senin kernelini olduğu gibi bırakır.
+echo "✅ RaspAP kurulumu tamamlandı. Arayüz: http://10.3.141.1/ (kullanıcı: admin / şifre: secret)"
+read -p "👉 Devam etmek için ENTER'a basın..."
+
+#########################################
+# 19. RASPAP YEDEKTEN GERİ YÜKLEME SCRIPTİ
+#########################################
+echo "🗃️ raspap-restore.sh scripti hazırlanıyor..."
+sudo tee /usr/local/bin/raspap-restore.sh > /dev/null <<'EOF'
+#!/bin/bash
+# raspap-restore.sh - RaspAP yedeğinden geri yükleme (seçmeli)
+
+BACKUP_DIR="$PWD"
+PATTERN="raspap-backup-*.tar.gz"
+
+# Yedek dosyalarını bul
+mapfile -t FILES < <(ls -1t $BACKUP_DIR/$PATTERN 2>/dev/null)
+
+# Hiç dosya yoksa çık
+if [ ${#FILES[@]} -eq 0 ]; then
+  echo "❌ Hiç yedek dosyası bulunamadı ($BACKUP_DIR/$PATTERN)"
+  exit 1
+fi
+
+# Eğer parametre verilmişse onu kullan
+if [ -n "$1" ]; then
+  BACKUP_FILE="$1"
+else
+  echo "🔎 Bulunan yedek dosyaları:"
+  for i in "${!FILES[@]}"; do
+    echo "$((i+1))) ${FILES[$i]}"
+  done
+
+  # Kullanıcıdan seçim al
+  read -p "👉 Yüklemek istediğiniz yedeğin numarasını girin: " CHOICE
+  INDEX=$((CHOICE-1))
+
+  # Geçerli seçim mi kontrol et
+  if [ -z "${FILES[$INDEX]}" ]; then
+    echo "❌ Geçersiz seçim!"
+    exit 1
+  fi
+
+  BACKUP_FILE="${FILES[$INDEX]}"
+fi
+
+# Dosya mevcut mu kontrol et
+if [ ! -f "$BACKUP_FILE" ]; then
+  echo "❌ Yedek dosyası bulunamadı: $BACKUP_FILE"
+  exit 1
+fi
+
+# Geri yükle
+echo "🔄 [RaspAP Geri Yükleme] $BACKUP_FILE yükleniyor..."
+sudo tar xzvf "$BACKUP_FILE" -C /
+echo "✅ Geri yükleme tamamlandı!"
+echo "ℹ️ Değişikliklerin etkin olması için sistemi yeniden başlatmayı unutma."
+EOF
+
+# Çalıştırılabilir yap
+sudo chmod +x /usr/local/bin/raspap-restore.sh
+
+echo "✅ raspap-restore.sh başarıyla /usr/local/bin içine kopyalandı."
+echo "ℹ️ Kullanım: 'cd /yedeklerin_bulunduğu_klasör && sudo raspap-restore.sh'"
+read -p "👉 Devam etmek için ENTER'a basın..."
+
 
 #########################################
 # 17. TAMAMLANDI
